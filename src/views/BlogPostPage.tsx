@@ -1,8 +1,9 @@
 import { ArrowLeft, ArrowRight, Lock } from 'lucide-react'
 import { Navbar } from '../components/Navbar'
 import { SiteFooter } from '../components/SiteFooter'
+import { InternalLinksSection } from '../components/InternalLinksSection'
 import { forumPath, getForumThread, getRelatedForumThreads } from '../data/forums'
-import { guidePath } from '../data/games'
+import { getForumExploreLinks } from '../data/internal-links'
 import { CheckoutLink } from '../components/CheckoutLink'
 import { SeoMedia } from '../components/SeoMedia'
 import { SITE_HOST } from '../data/site'
@@ -148,26 +149,29 @@ export function BlogPostPage({ slug }: BlogPostPageProps) {
 
             <div className="page-card mt-12 rounded-2xl p-6 sm:p-8">
               <h2 className="text-lg font-semibold text-white">
-                Ready for Dota 2 Cheats?
+                Ready for Fortnite Spoofer?
               </h2>
               <p className="mt-2 text-sm leading-relaxed text-white/55">
-                Check Active loader status, then continue to hero ESP, map hack, and timers on{' '}
-                {SITE_HOST}. Need help? Read{' '}
-                <a href="/support" className="text-white/80 underline-offset-2 hover:underline">
-                  support
+                Check{' '}
+                <a href="/status" className="text-z-soft hover:text-white">
+                  loader status
+                </a>{' '}
+                on {SITE_HOST}, then visit the{' '}
+                <a href="/store" className="text-z-soft hover:text-white">
+                  products store
                 </a>{' '}
                 or{' '}
-                <a href="/reviews" className="text-white/80 underline-offset-2 hover:underline">
-                  player reviews
+                <a href="/blog" className="text-z-soft hover:text-white">
+                  blog guides
                 </a>
                 .
               </p>
               <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
                 <a
-                  href={guidePath('dota-2')}
+                  href="/fortnite-spoofer"
                   className="inline-flex items-center justify-center rounded-full border border-white/15 px-5 py-2.5 text-sm font-medium text-white hover:bg-white/5"
                 >
-                  Product details
+                  Spoofer details
                 </a>
                 <a
                   href="/support"
@@ -224,6 +228,8 @@ export function BlogPostPage({ slug }: BlogPostPageProps) {
             </div>
           </section>
         ) : null}
+
+        <InternalLinksSection title="From forums to products" links={getForumExploreLinks()} className="page-band" />
 
         <SiteFooter currentPath={forumPath(post.slug)} />
       </main>

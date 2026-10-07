@@ -3,10 +3,13 @@ import { Navbar } from '../components/Navbar'
 import { BlogArticleCard } from '../components/BlogArticleCard'
 import { SiteFooter } from '../components/SiteFooter'
 import { CheckoutLink } from '../components/CheckoutLink'
+import { InternalLinksSection } from '../components/InternalLinksSection'
 import { getArticle, getRelatedArticles } from '../data/articles'
 import { articlePath } from '../data/blog-paths'
-import { guidePath } from '../data/games'
-import { SITE_HOST } from '../data/site'
+import { getBlogExploreLinks } from '../data/internal-links'
+import { SeoMedia } from '../components/SeoMedia'
+import { getArticleMedia } from '../data/media'
+import { SITE_HOST, SITE_NAME } from '../data/site'
 import { NotFoundPage } from './NotFoundPage'
 
 type BlogArticlePageProps = {
@@ -62,6 +65,8 @@ export function BlogArticlePage({ slug }: BlogArticlePageProps) {
               {article.excerpt}
             </p>
 
+            <SeoMedia media={getArticleMedia(article.slug)} className="mt-8" showVideo={false} />
+
             <div className="mt-10 space-y-10">
               {article.sections.map((section) => (
                 <section key={section.heading} id={sectionId(section.heading)} className="scroll-mt-24">
@@ -78,21 +83,34 @@ export function BlogArticlePage({ slug }: BlogArticlePageProps) {
             </div>
 
             <div className="page-card mt-12 rounded-2xl p-6 sm:p-8">
-              <h2 className="text-lg font-semibold text-white">Ready for Dota 2 Cheats?</h2>
+              <h2 className="text-lg font-semibold text-white">Next steps on {SITE_NAME}</h2>
               <p className="mt-2 text-sm leading-relaxed text-white/55">
-                Check Active loader status on {SITE_HOST}, then continue to hero ESP, map hack, and
-                timers. Community discussion lives on{' '}
-                <a href="/forums" className="text-white/80 underline-offset-2 hover:underline">
+                Check{' '}
+                <a href="/status" className="text-z-soft hover:text-white">
+                  loader status
+                </a>{' '}
+                on {SITE_HOST}, pick a product on the{' '}
+                <a href="/store" className="text-z-soft hover:text-white">
+                  store
+                </a>
+                , or discuss this topic on{' '}
+                <a href="/forums" className="text-z-soft hover:text-white">
                   forums
                 </a>
                 .
               </p>
               <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
                 <a
-                  href={guidePath('dota-2')}
+                  href="/fortnite-spoofer"
                   className="inline-flex items-center justify-center rounded-full border border-white/15 px-5 py-2.5 text-sm font-medium text-white hover:bg-white/5"
                 >
-                  Product details
+                  Fortnite spoofer
+                </a>
+                <a
+                  href="/ban-checker"
+                  className="inline-flex items-center justify-center rounded-full border border-white/15 px-5 py-2.5 text-sm font-medium text-white hover:bg-white/5"
+                >
+                  Ban checker
                 </a>
                 <CheckoutLink className="cta-gradient inline-flex items-center justify-center rounded-full px-5 py-2.5 text-sm font-medium text-white">
                   Checkout
@@ -124,6 +142,12 @@ export function BlogArticlePage({ slug }: BlogArticlePageProps) {
             </div>
           </section>
         ) : null}
+
+        <InternalLinksSection
+          title="Keep exploring"
+          links={getBlogExploreLinks()}
+          className="page-band"
+        />
 
         <SiteFooter currentPath={articlePath(article.slug)} />
       </main>

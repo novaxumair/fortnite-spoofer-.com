@@ -1,13 +1,11 @@
 import type { ReactNode } from 'react'
 import { ArrowUpRight } from 'lucide-react'
 import { LogoMark } from './LogoMark'
-import { CheckoutLink } from './CheckoutLink'
 import {
   OFFICIAL_GAME_LINKS,
   SITE_GUIDE_LINKS,
   SITE_PAGE_LINKS,
 } from '../data/links'
-import { guidePath } from '../data/games'
 import { SITE_NAME } from '../data/site'
 import { isActiveRoute as isCurrent, normalizePath } from '../lib/paths'
 
@@ -74,18 +72,21 @@ export function SiteFooter({ currentPath }: SiteFooterProps) {
                 <LogoMark className="!h-16 !w-16" />
               </a>
               <p className="mt-4 max-w-sm text-sm leading-relaxed text-white/55">
-                Hero ESP, map hack, rune and roshan timers, and patch-synced loader status for Dota
-                2 on Windows PC.
+                Fortnite HWID spoofer, cheats, and UGC account recovery — blog guides, forums, status,
+                and ban checker on Windows PC.
               </p>
               <div className="mt-6 flex flex-wrap gap-3">
-                <CheckoutLink className="cta-gradient inline-flex rounded-full px-5 py-2.5 text-sm font-semibold text-white transition-opacity hover:opacity-90">
-                  View plans
-                </CheckoutLink>
                 <a
-                  href={guidePath('dota-2')}
+                  href="/store"
+                  className="cta-gradient inline-flex rounded-full px-5 py-2.5 text-sm font-semibold text-white transition-opacity hover:opacity-90"
+                >
+                  Products
+                </a>
+                <a
+                  href="/fortnite-spoofer"
                   className="inline-flex rounded-full border border-white/15 bg-white/[0.04] px-5 py-2.5 text-sm font-medium text-white/85 transition-colors hover:border-white/25 hover:bg-white/[0.07]"
                 >
-                  Product page
+                  Spoofer page
                 </a>
               </div>
             </div>
@@ -156,25 +157,9 @@ export function SiteFooter({ currentPath }: SiteFooterProps) {
             </div>
           </div>
 
-          <div className="mt-12 flex flex-col gap-3 border-t border-white/10 pt-8 text-xs text-white/40 sm:flex-row sm:items-center sm:justify-between">
+          <div className="mt-12 border-t border-white/10 pt-8 text-xs text-white/40">
             <p>
-              © {new Date().getFullYear()} {SITE_NAME}. Not affiliated with Valve Corporation.
-            </p>
-            <p className="sm:text-right">
-              Crawl index:{' '}
-              <a
-                href="/sitemap.xml"
-                className="text-white/55 underline-offset-2 transition-colors hover:text-white hover:underline"
-              >
-                sitemap.xml
-              </a>
-              <span className="mx-2 text-white/25">·</span>
-              <a
-                href="/sitemap"
-                className="text-white/55 underline-offset-2 transition-colors hover:text-white hover:underline"
-              >
-                HTML sitemap
-              </a>
+              © {new Date().getFullYear()} {SITE_NAME}. Not affiliated with Epic Games or Easy Anti-Cheat.
             </p>
           </div>
         </div>

@@ -2,60 +2,60 @@ export type FaqItem = { q: string; a: string }
 
 export const HOME_FAQS: FaqItem[] = [
   {
-    q: 'What are Dota 2 cheats?',
-    a: 'Dota 2 cheats on buydota2cheats.com are Windows PC tools with hero ESP, map hack, cooldown tracker, creep and rune timers, last-hit helper, ward ESP, roshan timer, and enemy inventory ESP — with Active or Updating loader status after Valve patches.',
+    q: 'What is Fortnite Spoofer?',
+    a: 'Fortnite Spoofer on fortnitespoofer.com is a Windows PC HWID utility suite with hardware profile manager, session isolation, pre-change backup, audit log, and compatibility checker — with Active or Updating status after Fortnite and EAC patches.',
   },
   {
-    q: 'How much do Dota 2 cheats cost?',
-    a: 'Dota 2 cheats start at $35 for monthly access (30 days). Lifetime access is $150. Confirm Active status and pricing on buydota2cheats.com before checkout.',
+    q: 'How much does Fortnite Spoofer cost?',
+    a: 'Fortnite spoofer access starts at $35 for monthly (30 days). Lifetime access is $150. Fortnite cheats and UGC account recovery use the same pricing on the store page.',
   },
   {
-    q: 'Do you sell tools for other games?',
-    a: 'No. buydota2cheats.com covers Dota 2 only — one product, no multi-game catalog.',
+    q: 'Do you sell Fortnite cheats on this site?',
+    a: 'Yes — on the store page only. The homepage focuses on fortnite spoofer HWID utilities; fortnite cheats have a dedicated product page to avoid mixed SEO.',
   },
   {
-    q: 'Is map hack required?',
-    a: 'Map hack is optional. Many players lead with hero ESP and timers first — then tune fog removal opacity so the overlay stays readable in teamfights.',
+    q: 'Does the spoofer work for other EAC games?',
+    a: 'Yes. Beyond Fortnite and Fortnite Tournaments (cleaner included), the spoofer supports Rust, Apex Legends, and other Easy Anti-Cheat titles listed on the product page.',
   },
   {
     q: 'How do you handle game patches?',
-    a: 'We publish Active or Updating labels after Dota 2 updates. Valve Anti-Cheat (VAC) and game builds change — always check status on buydota2cheats.com before you load.',
+    a: 'We publish Active or Updating labels after Fortnite updates. Easy Anti-Cheat builds change — always check status on fortnitespoofer.com before you apply profiles or load.',
   },
   {
-    q: 'What is hero ESP?',
-    a: 'Hero ESP shows enemy heroes with item readouts, level tags, and positioning intel so you can track power spikes and rotations before engagements.',
+    q: 'What is session isolation?',
+    a: 'Session isolation lets you apply a hardware profile for one boot cycle; reboot returns original hardware IDs unless you re-apply, as documented in the features list.',
   },
 ]
 
 export const PRODUCT_PAGE_FAQS: FaqItem[] = [
   ...HOME_FAQS,
   {
-    q: 'Which features are included?',
-    a: 'Hero ESP with items and level, full map hack (fog removal), ability cooldown tracker, creep spawn timers, rune spawn indicators, last hit prediction helper, auto-dodge skillshots, ward placement ESP, roshan timer, enemy inventory ESP, performance optimized overlays, and 24/7 support on Windows PC.',
+    q: 'Which spoofer features are included?',
+    a: 'Hardware coverage for disk, MAC, motherboard and registry traces, apply and revert workflow, cleaner for Fortnite, hardware profile manager, session isolation, pre-change backup, audit log, compatibility checker, and integrity verification.',
   },
   {
-    q: 'Do Dota 2 cheats work on Steam?',
-    a: 'Yes. The loader supports Dota 2 on Steam for Windows PC when status is Active.',
+    q: 'Does this work with Easy Anti-Cheat on Fortnite?',
+    a: 'The product is built for Fortnite and EAC-protected titles. Follow the setup forum thread and confirm Active status before launching Epic.',
   },
   {
     q: 'How do I get access?',
-    a: 'Start on the homepage, review features and Active status, open the Dota 2 store page, then continue to checkout for digital delivery.',
+    a: 'Open the store, choose Fortnite Spoofer, Fortnite Cheats, or UGC account recovery, then continue to checkout for digital delivery.',
   },
   {
-    q: 'How do I load Dota 2 cheats?',
-    a: 'Follow the complete setup forum thread: exclusions, launch Dota 2, run the loader, configure hero ESP and timers, save a profile. Re-check status after every patch.',
+    q: 'How do I run setup?',
+    a: 'Follow the complete setup forum thread: backup, Defender exclusions, apply profile, verify audit log, then launch Fortnite when status is Active.',
   },
   {
     q: 'Where do I get support?',
-    a: 'Use the Support page and channels linked after purchase. Include current status and whether you need load, menu, or delivery help.',
+    a: 'Use the Support page and Discord channels linked after purchase. Include current status and whether you need delivery, loader, or HWID help.',
   },
   {
     q: 'Where can I read reviews?',
-    a: 'Visit the Reviews page for buyer feedback on ESP clarity, map vision, timers, and loader updates.',
+    a: 'Visit the Reviews page for buyer feedback on profile management, session isolation, and loader updates.',
   },
   {
-    q: 'Is this the official Dota 2 site?',
-    a: 'No. We cover third-party software for Dota 2 only. Buy and play the game from Valve on Steam. We are not affiliated with Valve Corporation.',
+    q: 'Is this the official Epic Games site?',
+    a: 'No. We cover third-party utilities for Fortnite on Windows PC. Download Fortnite from Epic Games. We are not affiliated with Epic Games.',
   },
 ]
 

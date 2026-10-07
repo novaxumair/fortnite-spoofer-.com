@@ -4,10 +4,11 @@
 
 :root {
   color-scheme: dark;
-  font-family: Cinzel, "Times New Roman", serif;
+  font-family: "Burbank Big Condensed", system-ui, sans-serif;
+  font-weight: 700;
   background: #0d1117;
   color: #e6edf3;
-  font-size: 15px;
+  font-size: 20px;
   line-height: 1.5;
 }
 

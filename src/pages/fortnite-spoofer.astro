@@ -1,0 +1,27 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+import { ProductDetailPage } from '../views/ProductDetailPage'
+import { SEO, SITE_URL } from '../data/site'
+import { productDetailJsonLd } from '../lib/seo'
+
+const jsonLdExtra = [
+  productDetailJsonLd('Active'),
+  {
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE_URL}/` },
+      { '@type': 'ListItem', position: 2, name: 'Store', item: `${SITE_URL}/store` },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: 'Fortnite Spoofer',
+        item: `${SITE_URL}/fortnite-spoofer`,
+      },
+    ],
+  },
+]
+---
+
+<BaseLayout seo={SEO.spooferProduct} jsonLdExtra={jsonLdExtra}>
+  <ProductDetailPage client:load productId="fortnite-spoofer" />
+</BaseLayout>

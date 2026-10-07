@@ -21,8 +21,8 @@ export function ListingPageHero({
       <div className="listing-hero-bg pointer-events-none absolute inset-0" aria-hidden />
       <div className="relative z-20 flex flex-col">
         <Navbar currentPath={currentPath} />
-        <div className="page-x pb-10 pt-2 sm:pb-12 sm:pt-4">
-          <div className="mx-auto max-w-6xl">
+        <div className="page-x pb-7 pt-2 sm:pb-8 sm:pt-3">
+          <div className="mx-auto w-full max-w-6xl">
             <div className={search ? 'listing-hero-grid' : 'listing-hero-grid listing-hero-grid--solo'}>
               <div className="min-w-0">
                 <p className="listing-hero-eyebrow">{eyebrow}</p>

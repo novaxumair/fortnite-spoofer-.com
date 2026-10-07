@@ -27,7 +27,7 @@ const STATUS_COPY: Record<
   Active: {
     badge: 'Loader status',
     headline: 'Active',
-    sub: 'This build matches the live Dota 2 client on Steam. Safe to configure ESP and load when your setup checklist is done.',
+    sub: 'This build matches the current Fortnite client with Easy Anti-Cheat. Safe to configure HWID profiles and load when your setup checklist is done.',
     glow: 'shadow-[0_0_60px_rgba(52,211,153,0.22)]',
     ring: 'ring-1 ring-emerald-400/35',
     panel: 'from-emerald-500/12 via-[rgba(20,16,31,0.95)] to-[rgba(12,8,22,0.98)]',
@@ -37,7 +37,7 @@ const STATUS_COPY: Record<
   Updating: {
     badge: 'Loader status',
     headline: 'Updating',
-    sub: 'Valve shipped a Dota 2 patch or the loader is being re-tested. Wait for Active before ranked — forum moderators post ETA hints.',
+    sub: 'Epic shipped a Fortnite patch or the loader is being re-tested. Wait for Active before ranked — forum moderators post ETA hints.',
     glow: 'shadow-[0_0_60px_rgba(251,191,36,0.18)]',
     ring: 'ring-1 ring-amber-400/35',
     panel: 'from-amber-500/10 via-[rgba(20,16,31,0.95)] to-[rgba(12,8,22,0.98)]',
@@ -47,7 +47,7 @@ const STATUS_COPY: Record<
   'Use with caution': {
     badge: 'Loader status',
     headline: 'Caution',
-    sub: 'Modules may work but reports or VAC noise are elevated. Prefer custom lobbies and read the VAC safety thread before mains.',
+    sub: 'Modules may work but reports or EAC noise are elevated. Prefer Creative or read the safety thread before mains.',
     glow: 'shadow-[0_0_60px_rgba(248,113,113,0.16)]',
     ring: 'ring-1 ring-rose-400/30',
     panel: 'from-rose-500/10 via-[rgba(20,16,31,0.95)] to-[rgba(12,8,22,0.98)]',
@@ -57,7 +57,7 @@ const STATUS_COPY: Record<
 }
 
 export function StatusPage() {
-  const game = getGame('dota-2')
+  const game = getGame('fortnite')
   const status: GameStatus = game?.status ?? 'Active'
   const ui = STATUS_COPY[status]
   const StatusIcon = ui.icon
@@ -111,7 +111,7 @@ export function StatusPage() {
             </p>
             {isActive ? (
               <p className="mt-4 text-center text-xs text-white/40">
-                Label can flip after the next Dota 2 patch — refresh before every session.
+                Label can flip after the next Fortnite patch — refresh before every session.
               </p>
             ) : null}
           </div>
@@ -120,9 +120,9 @@ export function StatusPage() {
             <article className="page-card rounded-2xl border-t-2 border-t-emerald-400/70 p-5 sm:p-6">
               <h2 className="text-lg font-semibold text-emerald-300">Active</h2>
               <p className="mt-2 text-sm leading-relaxed text-white/55">
-                Loader matches the current game build. Configure hero ESP, map hack, and timers, save
-                a profile, then checkout if you still need a license. Monthly ${PRODUCT_PRICE_USD} ·
-                lifetime ${PRODUCT_LIFETIME_PRICE_USD}.
+                Loader matches the current game build. Configure HWID profiles, backups, and
+                session isolation, then checkout if you still need a license. Monthly $
+                {PRODUCT_PRICE_USD} · lifetime ${PRODUCT_LIFETIME_PRICE_USD}.
               </p>
               <a
                 href={forumPath('complete-setup')}
@@ -137,10 +137,10 @@ export function StatusPage() {
                 The menu may fail to inject or features may be stale. Do not reinstall Windows on
                 repeat — watch this page and the{' '}
                 <a
-                  href={forumPath('game-patch-status')}
+                  href={forumPath('eac-fortnite-status')}
                   className="text-z-soft underline-offset-2 hover:text-white hover:underline"
                 >
-                  patch-day thread
+                  EAC patch-day thread
                 </a>{' '}
                 until Active returns.
               </p>
@@ -148,9 +148,9 @@ export function StatusPage() {
           </div>
 
           <p className="mt-8 text-sm leading-relaxed text-white/50">
-            {SITE_NAME} is built for Dota 2 on Windows PC via Steam. Valve Anti-Cheat (VAC) still
-            applies — use conservative settings on accounts you care about. See the{' '}
-            <a href={guidePath('dota-2')} className="text-z-soft hover:text-white">
+            {SITE_NAME} is built for Fortnite on Windows PC with Easy Anti-Cheat (EAC). Epic
+            enforcement still applies — use conservative settings on accounts you care about. See the{' '}
+            <a href={guidePath('fortnite')} className="text-z-soft hover:text-white">
               product page
             </a>{' '}
             for modules and the{' '}
@@ -176,11 +176,11 @@ export function StatusPage() {
               </span>
             )}
             <a
-              href={forumPath('game-patch-status')}
+              href={forumPath('eac-fortnite-status')}
               className="inline-flex items-center justify-center gap-2 rounded-full border border-white/15 bg-white/[0.04] px-7 py-3.5 text-sm font-semibold text-white/90 transition-colors hover:border-white/25 hover:bg-white/[0.07]"
             >
               <MessageSquare className="h-4 w-4" strokeWidth={2} aria-hidden />
-              Patch-day forum thread
+              EAC & Fortnite status thread
             </a>
           </div>
         </div>

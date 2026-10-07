@@ -1,11 +1,15 @@
-import { D2_COVER, D2_GAME_COVER, D2_HERO, D2_MENU } from './media'
+import { FN_COVER, FN_GAME_COVER, FN_HERO, FN_MENU } from './media'
 import { SITE_OG, getOgImageForPath, PAGE_OG } from './og'
 
 export { SITE_OG, getOgImageForPath, PAGE_OG }
 export { forumOgImage } from './og'
 
-export const D2_PRODUCT_HERO = D2_HERO
-export const D2_PRODUCT_COVER = D2_COVER
+export const FN_PRODUCT_HERO = FN_HERO
+export const FN_PRODUCT_COVER = FN_COVER
+
+/** @deprecated */
+export const D2_PRODUCT_HERO = FN_PRODUCT_HERO
+export const D2_PRODUCT_COVER = FN_PRODUCT_COVER
 
 export type ImageSeoFields = {
   alt: string
@@ -21,13 +25,13 @@ export const IMAGE_SEO: Record<
     heroCaption: string
   }
 > = {
-  'dota-2': {
-    alt: 'Dota 2 official key art on Steam for PC',
-    title: 'Dota 2 Cheats Product Details',
-    caption: 'Hero ESP, map hack, timers, and inventory intel',
-    heroAlt: 'Dota 2 — IGN key art',
-    heroTitle: 'Dota 2 Cheats Store',
-    heroCaption: 'Premium Dota 2 cheats on Windows PC',
+  'fortnite-spoofer': {
+    alt: 'Fortnite HWID spoofer product on Windows PC',
+    title: 'Fortnite Spoofer Product Details',
+    caption: 'HWID spoofer for Fortnite and EAC titles',
+    heroAlt: 'Fortnite spoofer — product hero',
+    heroTitle: 'Fortnite Spoofer',
+    heroCaption: 'Premium HWID spoofer for Fortnite on Windows PC',
   },
 }
 
@@ -38,62 +42,62 @@ export const PAGE_IMAGES: Record<
   PageImage
 > = {
   home: {
-    src: D2_HERO,
+    src: FN_HERO,
     og: PAGE_OG.home,
-    alt: 'Dota 2 cheats gameplay artwork for PC',
-    title: 'Dota 2 Cheats',
-    caption: 'Hero ESP, map hack, and timer overview.',
+    alt: 'Fortnite spoofer and cheats overview',
+    title: 'Fortnite Spoofer',
+    caption: 'HWID spoofer, cheats, and UGC recovery.',
   },
   blog: {
-    src: '/media/d2-screenshot-5.webp',
+    src: '/og/blog.jpg',
     og: PAGE_OG.blog,
-    alt: 'Dota 2 cheats blog guides screenshot',
-    title: 'Dota 2 Cheats Blog',
-    caption: 'Console commands, features, and safety articles.',
+    alt: 'Fortnite spoofer blog guides',
+    title: 'Fortnite Spoofer Blog',
+    caption: 'HWID, EAC, and Fortnite setup articles.',
   },
   forums: {
-    src: '/media/d2-screenshot-4.webp',
+    src: '/og/forums.jpg',
     og: PAGE_OG.forums,
-    alt: 'Dota 2 ESP gameplay screenshot from forums',
-    title: 'Dota 2 Cheats Forums',
-    caption: 'Setup, VAC, ESP, and loader threads.',
+    alt: 'Fortnite spoofer community forums',
+    title: 'Fortnite Spoofer Forums',
+    caption: 'Setup, EAC, spoofer, and loader threads.',
   },
   reviews: {
-    src: '/media/d2-screenshot-2.webp',
+    src: '/og/reviews.jpg',
     og: PAGE_OG.reviews,
-    alt: 'Dota 2 cheats review screenshot',
-    title: 'Dota 2 Cheats Reviews',
-    caption: 'Buyer feedback on ESP and timers.',
+    alt: 'Fortnite spoofer buyer reviews',
+    title: 'Fortnite Spoofer Reviews',
+    caption: 'Feedback on spoofer and loader updates.',
   },
   faq: {
-    src: '/media/d2-screenshot-8.webp',
+    src: '/og/faq.jpg',
     og: PAGE_OG.faq,
-    alt: 'Dota 2 hero ESP screenshot for FAQ',
-    title: 'Dota 2 Cheats FAQ',
+    alt: 'Fortnite spoofer FAQ',
+    title: 'Fortnite Spoofer FAQ',
     caption: 'Pricing, features, and setup answers.',
   },
   support: {
-    src: '/media/d2-screenshot-6.webp',
+    src: '/og/support.jpg',
     og: PAGE_OG.support,
-    alt: 'Dota 2 cheat support screenshot',
-    title: 'Dota 2 Cheats Support',
+    alt: 'Fortnite spoofer support',
+    title: 'Fortnite Spoofer Support',
     caption: 'Delivery and loader help.',
   },
   product: {
-    src: D2_GAME_COVER,
+    src: FN_GAME_COVER,
     og: PAGE_OG.product,
-    alt: 'Dota 2 official key art (IGN) — Dota 2 Cheats store',
-    title: 'Dota 2 Cheats Store',
-    caption: 'Hero ESP, map hack, timers, and support.',
+    alt: 'Fortnite spoofer store',
+    title: 'Fortnite Spoofer Store',
+    caption: 'Spoofer, cheats, and UGC recovery plans.',
   },
 }
 
 export function getGameImage(_slug: string): string {
-  return D2_GAME_COVER
+  return FN_GAME_COVER
 }
 
 export function getProductHeroImage(_slug: string): string {
-  return D2_GAME_COVER
+  return FN_GAME_COVER
 }
 
 export function getOgImage(path?: string): string {
@@ -124,5 +128,6 @@ export function getImageTitle(
   return `${name} product`
 }
 
-/** @deprecated unused menu asset — kept for legacy imports */
-export const D2_MENU_ASSET = D2_MENU
+export const FN_MENU_ASSET = FN_MENU
+/** @deprecated */
+export const D2_MENU_ASSET = FN_MENU

@@ -1,7 +1,7 @@
 # www → apex is handled in workers/site.js (Worker _redirects allow relative paths only)
 
-# Checkout (302 — not indexed as site content; see CheckoutLink)
-/checkout  https://zadeyo.com/go/UMAIR?to=%2Fproducts%2Fdota-2  302
+# Checkout (302 — spoofer default)
+/checkout  https://zadeyo.com/go/UMAIR?to=%2Fproducts%2Fhwid-spoofer  302
 
 # Path aliases
 /refund/        /refunds       301
@@ -14,53 +14,67 @@
 /terms-of-service /terms       301
 /terms-of-service/ /terms      301
 
-# Primary SEO keyword variants → product or home
+# Legacy Dota / template paths → Fortnite store
+/dota-2-cheats    /fortnite-spoofer   301
+/dota-2-cheats/   /fortnite-spoofer   301
 /buy-dota-2-cheats  /   301
 /buy-dota-2-cheats/ /   301
-/buy-dota2-cheats   /dota-2-cheats   301
-/buy-dota2-cheats/  /dota-2-cheats   301
-/get-dota-2-cheats  /forums/complete-setup  301
-/get-dota-2-cheats/ /forums/complete-setup  301
+/buy-dota2-cheats   /   301
+/buy-dota2-cheats/  /   301
 
-# Legacy Wardogs / template paths
-/wardogs-cheats    /dota-2-cheats   301
-/wardogs-cheats/   /dota-2-cheats   301
-/buy-wardogs-cheats  /   301
-/buy-wardogs-cheats/ /   301
-/the-isle-cheats    /dota-2-cheats   301
-/the-isle-cheats/   /dota-2-cheats   301
-/abi-cheats    /dota-2-cheats   301
-/abi-cheats/   /dota-2-cheats   301
-/dayz-cheats    /dota-2-cheats   301
-/dayz-cheats/   /dota-2-cheats   301
+# Legacy OG + media (avoid 404 after Fortnite migration)
+/og/dota-2-cheats.jpg  /og/product.jpg  301
+/media/d2-hero-full.webp  /media/fn-hero-full.webp  301
+/media/d2-cover.webp  /media/fn-cover.webp  301
+/media/d2-ign-cover.webp  /media/fn-ign-cover.webp  301
+/media/d2-game-cover.webp  /media/fn-ign-cover.webp  301
+/media/d2-menu.webp  /media/fn-menu.webp  301
+/media/d2-video-thumb.jpg  /media/fn-video-thumb.jpg  301
+/media/d2-screenshot-1.webp  /media/fn-screenshot-1.webp  301
+/media/d2-screenshot-2.webp  /media/fn-screenshot-2.webp  301
+/media/d2-screenshot-3.webp  /media/fn-screenshot-3.webp  301
+/media/d2-screenshot-4.webp  /media/fn-screenshot-4.webp  301
+/media/d2-screenshot-5.webp  /media/fn-screenshot-5.webp  301
+/media/d2-screenshot-6.webp  /media/fn-screenshot-6.webp  301
+/media/d2-screenshot-7.webp  /media/fn-screenshot-7.webp  301
+/media/d2-screenshot-8.webp  /media/fn-screenshot-8.webp  301
+/media/d2-screenshot-9.webp  /media/fn-screenshot-9.webp  301
+/media/d2-screenshot-10.webp  /media/fn-screenshot-10.webp  301
+/wardogs-cheats    /store   301
+/the-isle-cheats    /store   301
+/abi-cheats    /store   301
+/abi-cheats/   /store   301
+
+# SEO keyword aliases → focused routes (avoid cannibalism)
+/spoofer          /fortnite-spoofer   301
+/hwid-spoofer     /fortnite-spoofer   301
+/fortnite-cheats-store  /fortnite-cheats  301
+/ugc              /ugc-account-recovery  301
 
 /guides         /forums        301
 /guides/        /forums        301
 /features-list  /forums/features-list  301
 /setup          /forums/complete-setup 301
-/store          /dota-2-cheats 301
-/preview        /dota-2-cheats 301
-# /status is a dedicated loader status page (see src/pages/status.astro)
+/preview        /fortnite-spoofer 301
 
 # Forum short-slug aliases
 /forums/setup         /forums/complete-setup     301
 /forums/features      /forums/features-list      301
-/forums/vac           /forums/vac-anticheat-safety 301
-/forums/esp           /forums/hero-esp-config    301
-/forums/map           /forums/map-hack-fog-config 301
-/forums/patch         /forums/game-patch-status  301
+/forums/eac           /forums/eac-fortnite-status 301
+/forums/spoofer       /forums/hwid-spoofer-fortnite 301
+/forums/cheats        /forums/fortnite-cheats-discussion 301
+/forums/ugc           /forums/ugc-account-recovery-help 301
+/forums/patch         /forums/eac-fortnite-status 301
 /forums/loader        /forums/loader-errors      301
-/forums/buy           /forums/buy-dota-2-cheats-safely 301
-/forums/lifetime      /forums/dota-2-cheats-lifetime 301
+/forums/lifetime      /forums/lifetime-vs-monthly 301
 
-# Legacy blog → new blog (do not send to forums)
+# Legacy blog → new blog
 /articles       /blog        301
 /articles/      /blog        301
 /articles/*     /blog        301
 
 # Sitemap bytes: /sitemap and /sitemap.xml (same file in dist). Do not redirect — GSC needs 200 on the submitted URL.
 
-# Alternate sitemap URLs
 /sitemap-pages.xml     /sitemap  301
 /sitemap-products.xml  /sitemap  301
 /sitemap-forums.xml    /sitemap  301

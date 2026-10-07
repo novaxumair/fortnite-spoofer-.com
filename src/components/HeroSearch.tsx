@@ -30,7 +30,7 @@ export function HeroSearch({
   value,
   onChange,
   submitTo = 'forums',
-  placeholder = 'Search Dota 2 forum threads…',
+  placeholder = 'Search Fortnite spoofer forum threads…',
   autoFocus = false,
   className = '',
 }: HeroSearchProps) {
@@ -185,7 +185,7 @@ export function HeroSearch({
                   onMouseEnter={() => setActive(i)}
                   onClick={() => goToForum(i)}
                   className={`flex min-h-[2.625rem] w-full items-center justify-between gap-3 px-4 py-2 text-left text-sm transition-colors ${
-                    i === active ? 'bg-z-accent/20 text-z-ink' : 'text-white/75 hover:bg-z-accent/10'
+                    i === active ? 'bg-z-accent/20 text-white' : 'text-white/75 hover:bg-z-accent/10'
                   }`}
                 >
                   <span className="truncate font-medium">{post.title}</span>

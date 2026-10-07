@@ -10,18 +10,18 @@ const root = join(dirname(fileURLToPath(import.meta.url)), '..')
 const publicDir = join(root, 'public')
 const dataDir = join(root, 'src', 'data')
 const pagesDir = join(root, 'src', 'pages')
-const SITE = (process.env.SITE_URL || 'https://buydota2cheats.com').replace(/\/$/, '')
+const SITE = (process.env.SITE_URL || 'https://fortnitespoofer.com').replace(/\/$/, '')
 const TODAY = new Date().toLocaleDateString('en-CA')
 
-const HERO_FULL = '/media/d2-hero-full.webp'
-const COVER = '/media/d2-cover.webp'
-const BOX = '/media/d2-screenshot-8.webp'
-const ESP = '/media/d2-screenshot-5.webp'
-const MENU = '/media/d2-menu.webp'
-const SHOT = (n) => `/media/d2-screenshot-${n}.webp`
-const VIDEO_THUMB = '/media/d2-video-thumb.jpg'
+const HERO_FULL = '/media/fn-hero-full.webp'
+const COVER = '/media/fn-cover.webp'
+const BOX = '/media/fn-screenshot-8.webp'
+const ESP = '/media/fn-screenshot-5.webp'
+const MENU = '/media/fn-menu.webp'
+const SHOT = (n) => `/media/fn-screenshot-${n}.webp`
+const VIDEO_THUMB = '/media/fn-video-thumb.jpg'
 const PREVIEW_VIDEO = '/videos/hero.webm'
-const OG_DEFAULT = '/og/dota-2-cheats.jpg'
+const OG_DEFAULT = '/og/product.jpg'
 
 const ALL_SITE_IMAGES = [
   HERO_FULL,
@@ -32,13 +32,14 @@ const ALL_SITE_IMAGES = [
   ...Array.from({ length: 10 }, (_, i) => SHOT(i + 1)),
   VIDEO_THUMB,
   '/og/home.jpg',
-  '/og/dota-2-cheats.jpg',
+  '/og/product.jpg',
   '/og/blog.jpg',
   '/og/forums.jpg',
   '/og/reviews.jpg',
   '/og/faq.jpg',
   '/og/support.jpg',
   '/og/status.jpg',
+  '/og/ban-checker.jpg',
   '/og/privacy.jpg',
   '/og/terms.jpg',
   '/og/refunds.jpg',
@@ -49,21 +50,24 @@ const FORUM_IMAGES = {
   'complete-setup': HERO_FULL,
   'hero-esp-config': ESP,
   'map-hack-fog-config': BOX,
-  'game-patch-status': COVER,
+  'eac-fortnite-status': COVER,
   'loader-errors': SHOT(7),
-  'vac-anticheat-safety': MENU,
-  'dota-2-cheats-discussion': HERO_FULL,
+  'fortnite-spoofer-discussion': HERO_FULL,
 }
 
 const PAGE_META = {
   '/': { priority: '1.0', changefreq: 'daily' },
-  '/dota-2-cheats': { priority: '0.9', changefreq: 'weekly' },
+  '/store': { priority: '0.92', changefreq: 'weekly' },
+  '/fortnite-spoofer': { priority: '0.9', changefreq: 'weekly' },
+  '/fortnite-cheats': { priority: '0.88', changefreq: 'weekly' },
+  '/ugc-account-recovery': { priority: '0.86', changefreq: 'weekly' },
   '/blog': { priority: '0.88', changefreq: 'weekly' },
   '/forums': { priority: '0.85', changefreq: 'weekly' },
   '/reviews': { priority: '0.8', changefreq: 'weekly' },
   '/faq': { priority: '0.75', changefreq: 'monthly' },
   '/support': { priority: '0.75', changefreq: 'weekly' },
   '/status': { priority: '0.82', changefreq: 'daily' },
+  '/ban-checker': { priority: '0.84', changefreq: 'weekly' },
   '/privacy': { priority: '0.4', changefreq: 'yearly' },
   '/terms': { priority: '0.4', changefreq: 'yearly' },
   '/refunds': { priority: '0.45', changefreq: 'yearly' },
@@ -93,6 +97,15 @@ function siteUrl(path) {
 }
 
 function loadGames() {
+  const productsPath = join(dataDir, 'products.ts')
+  if (existsSync(productsPath)) {
+    const src = readFileSync(productsPath, 'utf8')
+    return [...src.matchAll(/path: '(\/[^']+)'/g)].map((match) => ({
+      slug: match[1].replace(/^\//, ''),
+      path: match[1],
+      name: match[1],
+    }))
+  }
   const src = readFileSync(join(dataDir, 'games.ts'), 'utf8')
   return [...src.matchAll(/\{\s*slug:\s*['"]([^'"]+)['"],\s*name:\s*['"]([^'"]+)['"]/g)].map(
     (match) => ({ slug: match[1], name: match[2] }),
@@ -207,7 +220,7 @@ function imagesForPath(path, games, forums) {
   if (game) {
     return [
       {
-        src: '/og/dota-2-cheats.jpg',
+        src: '/og/product.jpg',
         title: 'Dota 2 Cheats Open Graph',
         caption: 'Google and social preview for the Dota 2 Cheats product page.',
       },
@@ -351,7 +364,7 @@ function videosForPath(path) {
 function collectAllPaths(games, forums, articles, staticRoutes) {
   const paths = new Set([
     ...staticRoutes,
-    ...games.map((game) => `/${game.slug}-cheats`),
+    ...games.map((game) => game.path || `/${game.slug}-cheats`),
     ...forums.map((forum) => `/forums/${forum.slug}`),
     ...articles.map((article) => `/blog/${article.slug}`),
   ])
@@ -457,8 +470,10 @@ function validate(games, forums, articles, allPaths, sitemap) {
     errors.push('Retired forum slug remains indexed')
   }
   for (const game of games) {
-    const page = join(pagesDir, `${game.slug}-cheats.astro`)
-    if (!existsSync(page)) errors.push(`Product route has no page file: /${game.slug}-cheats`)
+    const routePath = game.path || `/${game.slug}-cheats`
+    const pageFile = `${game.slug}.astro`
+    const page = join(pagesDir, pageFile)
+    if (!existsSync(page)) errors.push(`Product route has no page file: ${routePath}`)
   }
   if (forums.length && !existsSync(join(pagesDir, 'forums', '[slug].astro'))) {
     errors.push('Forum routes have no dynamic page file: src/pages/forums/[slug].astro')
@@ -515,8 +530,8 @@ function validate(games, forums, articles, allPaths, sitemap) {
   if (/Tarkov|tarkovcheats|EFT Reaper|Warzone|warzonecheats|Ricochet/i.test(sitemap)) {
     errors.push('Sitemap still contains legacy Tarkov/Warzone labels')
   }
-  if (!sitemap.includes('buydota2cheats.com')) {
-    errors.push('Sitemap must target buydota2cheats.com')
+  if (!sitemap.includes('fortnitespoofer.com')) {
+    errors.push('Sitemap must target fortnitespoofer.com')
   }
   if (/tarkovcheats|warzonecheats|buywardogscheats|wardogs|zadeyo|arena breakout/i.test(sitemap)) {
     errors.push('Sitemap contains legacy or third-party branding')

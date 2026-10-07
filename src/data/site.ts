@@ -1,50 +1,46 @@
 import { SITE_OG } from './images'
 import { PAGE_OG } from './og'
 
-export const SITE_URL = 'https://buydota2cheats.com'
-export const SITE_NAME = 'Dota 2 Cheats'
-export const SITE_HOST = 'buydota2cheats.com'
+export const SITE_URL = 'https://fortnitespoofer.com'
+export const SITE_NAME = 'Fortnite Spoofer'
+export const SITE_HOST = 'fortnitespoofer.com'
 
 /** Stable site identity — Organization, WebSite, and about copy (not per-route). */
 export const SITE_PURPOSE =
-  'Dota 2 Cheats is a single-game site focused on Dota 2 map vision, hero ESP, timers, and related PC tools. The site is dedicated to Dota 2 only and does not sell cheats for other games.'
+  'Fortnite Spoofer is a Fortnite-focused site for hardware ID testing utilities, Easy Anti-Cheat (EAC) status, and related Windows PC tools — including a separate Fortnite cheats product and UGC account recovery workspace in the store.'
 
 /** Site-wide subject terms for schema knowsAbout (max 6). */
 export const SITE_ABOUT = [
-  'Dota 2 cheats',
-  'Dota 2',
-  'Dota 2 ESP',
-  'Dota 2 map hack',
-  'Valve Anti-Cheat',
-  'Dota 2 cheat setup',
+  'Fortnite Spoofer',
+  'HWID utilities',
+  'Fortnite',
+  'Easy Anti-Cheat',
+  'hardware profile manager',
+  'Fortnite spoofer setup',
 ] as const
 
-/** Legitimate brand variants only — not a meta keyword list. */
 export const ORGANIZATION_ALTERNATE_NAMES = [
-  'Dota 2 Cheats',
-  'Dota 2 cheats',
-  'buydota2cheats',
-  'buydota2cheats.com',
+  'Fortnite Spoofer',
+  'fortnite spoofer',
+  'fortnitespoofer',
+  'fortnitespoofer.com',
 ] as const
 
-/**
- * Short intent-specific terms per main route (3–6 each). Not rendered as meta keywords.
- */
 export const SEO_ROUTE_INTENTS = {
-  home: ['dota 2 cheats', 'Dota 2 ESP', 'Dota 2 map hack', 'cheat dota 2'],
-  product: ['dota 2 cheats', 'Dota 2 features', 'Dota 2 store', 'Dota 2 setup'],
-  featuresHub: ['Dota 2 cheat features', 'hero ESP', 'fog of war hack'],
-  reviews: ['Dota 2 Cheats reviews', 'Dota 2 buyer feedback'],
-  blog: ['dota 2 cheats', 'dota 2 cheats list', 'cheat dota 2', 'cheat code dota 2'],
-  forums: ['dota 2 cheats', 'cheat dota 2', 'VAC Dota 2', 'Dota 2 setup'],
-  faq: ['Dota 2 Cheats FAQ', 'Dota 2 setup questions'],
+  home: ['fortnite spoofer', 'hwid spoofer fortnite', 'fortnite hwid spoofer', 'spoofer fortnite'],
+  store: ['Fortnite spoofer store', 'hwid utilities', 'Fortnite cheats store'],
+  spoofer: ['fortnite spoofer', 'best fortnite spoofer', 'fortnite perm spoofer'],
+  cheats: ['fortnite cheats', 'cheats for fortnite', 'best fortnite cheats'],
+  ugc: ['UGC account recovery', 'account recovery tool'],
+  reviews: ['Fortnite Spoofer reviews', 'buyer feedback'],
+  blog: ['fortnite spoofer', 'hwid spoofer fortnite', 'fortnite cheats'],
+  forums: ['fortnite spoofer', 'hwid spoofer fortnite reddit', 'fortnite cheats'],
+  faq: ['Fortnite Spoofer FAQ', 'HWID utilities questions'],
 } as const
 
-/** Product JSON-LD description (features + delivery — distinct from SITE_PURPOSE). */
 export const PRODUCT_SCHEMA_DESCRIPTION =
-  'Windows PC menu for Dota 2 with hero ESP, full map hack, ability cooldown tracker, creep and rune timers, last-hit helper, auto-dodge, ward ESP, roshan timer, enemy inventory ESP, and digital license delivery.'
+  'Windows PC HWID utility suite for Fortnite with hardware profile manager, session isolation, pre-change backup, audit log, compatibility checker, and digital license delivery.'
 
-/** Offer price shown on product schema + purchase UI (lowest plan). */
 export const PRODUCT_PRICE_USD = '35'
 
 export const PRODUCT_LIFETIME_PRICE_USD = '150'
@@ -71,125 +67,165 @@ const INDEX_ROBOTS =
 
 export const SEO = {
   home: {
-    title: 'Dota 2 Cheats | ESP, Map Hack & Timers',
+    title: 'Fortnite Spoofer | Hardware ID & Privacy Utilities',
     description:
-      'Buy Dota 2 cheats for Windows PC. Hero ESP, full map hack, cooldown tracker, creep and rune timers, last-hit helper, ward ESP, roshan timer, and 24/7 support.',
+      'Buy Fortnite spoofer and hardware ID testing utility for Windows PC. Profile manager, session isolation, pre-change backup, audit log, and safe recovery. Monthly $35 or lifetime $150.',
     path: '/',
     ogType: 'website',
     image: PAGE_OG.home,
-    imageAlt: 'Dota 2 cheats gameplay with hero ESP, map vision, and timers on PC',
+    imageAlt: 'Fortnite spoofer hardware ID utilities on Windows PC',
     robots: INDEX_ROBOTS,
   },
   blog: {
-    title: 'Dota 2 Cheats Blog | Guides & Features',
+    title: 'Fortnite Spoofer Intel | HWID Utilities',
     description:
-      'Dota 2 cheats blog with console command guides, item lists, lobby setup, feature deep dives, HWID safety, and 2026 product comparisons.',
+      'Fortnite spoofer intel hub for hardware ID testing utilities — profile managers, session isolation, Windows setup, compatibility checkers, and status before you buy.',
     path: '/blog',
     ogType: 'website',
     image: PAGE_OG.blog,
-    imageAlt: 'Dota 2 cheats blog guides and feature articles',
+    imageAlt: 'Fortnite spoofer blog and HWID guides',
     robots: INDEX_ROBOTS,
   },
   forums: {
-    title: 'Dota 2 Cheats Forums | Community Threads',
+    title: 'Fortnite Spoofer Forums | Community Threads',
     description:
-      'Reddit-style Dota 2 cheats forums — VAC safety, setup, hero ESP, map hack configs, loader help, and patch-day status from moderators.',
+      'Community forums for fortnite spoofer and HWID utilities — EAC status, setup, loader help, and patch-day updates from moderators.',
     path: '/forums',
     ogType: 'website',
     image: PAGE_OG.forums,
-    imageAlt: 'Dota 2 cheats community forum threads',
+    imageAlt: 'Fortnite spoofer community forum threads',
     robots: INDEX_ROBOTS,
   },
   reviews: {
-    title: 'Dota 2 Cheats Reviews | Buyer Feedback',
+    title: 'Fortnite Spoofer Reviews | Buyer Feedback',
     description:
-      'Read Dota 2 cheats reviews covering ESP clarity, map vision, timer accuracy, loader stability, and overall value on Windows PC.',
+      'Read Fortnite spoofer reviews from buyers covering profile management, session isolation, audit logs, and status before you pick monthly or lifetime.',
     path: '/reviews',
     ogType: 'website',
     image: PAGE_OG.reviews,
-    imageAlt: 'Dota 2 cheats review screenshot with ESP overlays',
+    imageAlt: 'Fortnite spoofer review feedback',
     robots: INDEX_ROBOTS,
   },
   faq: {
-    title: 'Dota 2 Cheats FAQ',
+    title: 'Fortnite Spoofer FAQ | HWID Utilities',
     description:
-      'Frequently asked questions about Dota 2 cheats covering VAC, features, Windows setup, monthly and lifetime plans, and support.',
+      'FAQ for Fortnite spoofer utilities on Windows PC — $35 monthly and $150 lifetime, hardware profile and backup features, status, setup, and Discord support.',
     path: '/faq',
     ogType: 'website',
     image: PAGE_OG.faq,
-    imageAlt: 'Dota 2 hero ESP overlay screenshot from FAQ',
+    imageAlt: 'Fortnite spoofer FAQ',
     robots: INDEX_ROBOTS,
   },
   support: {
-    title: 'Dota 2 Cheats Support',
+    title: 'Fortnite Spoofer Support | HWID Utilities',
     description:
-      'Get support for Dota 2 cheats including loader setup, configuration help, troubleshooting, and feature guidance after purchase.',
+      'Get support for Fortnite spoofer utilities on Discord — loader setup, instant delivery, menu configuration, and system status help after you purchase.',
     path: '/support',
     ogType: 'website',
     image: PAGE_OG.support,
-    imageAlt: 'Dota 2 cheat support and loader help',
+    imageAlt: 'Fortnite spoofer support',
     robots: INDEX_ROBOTS,
   },
-  product: {
-    title: 'Dota 2 Cheats Store',
+  store: {
+    title: 'Fortnite Spoofer Store | HWID Utilities',
     description:
-      'Dota 2 cheats store — hero ESP, map hack, timers, last-hit helper, auto-dodge, and inventory ESP. Monthly $35 and lifetime $150 with instant delivery.',
-    path: '/dota-2-cheats',
+      'Fortnite spoofer store for hardware ID testing utilities. Monthly access is $35 and lifetime is $150, featuring profile management, backups, and instant delivery.',
+    path: '/store',
+    ogType: 'website',
+    image: PAGE_OG.product,
+    imageAlt: 'Fortnite Spoofer store — spoofer, cheats, and UGC tools',
+    robots: INDEX_ROBOTS,
+  },
+  spooferProduct: {
+    title: 'Fortnite Spoofer | HWID Utilities & EAC Recovery',
+    description:
+      'Buy Fortnite spoofer for HWID utilities on Windows PC. Profile manager, backups, session isolation, and EAC title support. Monthly $35 or lifetime $150.',
+    path: '/fortnite-spoofer',
     ogType: 'product',
     image: PAGE_OG.product,
-    imageAlt: 'Dota 2 store page showing ESP, map hack, and timer modules',
+    imageAlt: 'Fortnite spoofer product page',
+    robots: INDEX_ROBOTS,
+  },
+  cheatsProduct: {
+    title: 'Fortnite Cheats | ESP, Aimbot & Loot Radar',
+    description:
+      'Buy Fortnite cheats for Windows PC — player ESP, aimbot, triggerbot, item ESP, and 2D radar. Easy Anti-Cheat status tracked. Monthly $35 or lifetime $150.',
+    path: '/fortnite-cheats',
+    ogType: 'product',
+    image: PAGE_OG.product,
+    imageAlt: 'Fortnite cheats ESP and aimbot features',
+    robots: INDEX_ROBOTS,
+  },
+  ugcProduct: {
+    title: 'UGC Account Recovery | Appeal Automation Tool',
+    description:
+      'UGC account recovery for Windows PC — appeal workflows, evidence logs, and multi-platform lockout tracking. Monthly $35 or lifetime $150 with instant delivery.',
+    path: '/ugc-account-recovery',
+    ogType: 'product',
+    image: PAGE_OG.product,
+    imageAlt: 'UGC account recovery workspace',
     robots: INDEX_ROBOTS,
   },
   features: {
-    title: 'Dota 2 Cheats Features',
+    title: 'Fortnite Spoofer Features | HWID Utilities',
     description:
-      'Dota 2 cheats features include hero ESP, fog removal, ability cooldown tracker, creep spawn timers, rune indicators, and roshan timer.',
+      'Fortnite spoofer features for hardware ID utilities — hardware profile manager, session isolation, pre-change backup, audit log, compatibility checker, and integrity verification on Windows PC.',
     path: '/forums/features-list',
     ogType: 'article',
     image: PAGE_OG.forums,
-    imageAlt: 'Dota 2 cheat feature list with ESP and map hack modules',
+    imageAlt: 'Fortnite spoofer feature list',
     robots: INDEX_ROBOTS,
   },
   setup: {
-    title: 'Dota 2 Cheats Setup',
+    title: 'Fortnite Spoofer Setup | HWID Utilities',
     description:
-      'Learn how Dota 2 cheats work, configure ESP and map vision, and optimize your loader setup on Windows PC.',
+      'Learn how to set up Fortnite spoofer hardware utilities, which compatibility checkers matter, and what to check before running your profile manager on Windows PC.',
     path: '/forums/complete-setup',
     ogType: 'article',
     image: PAGE_OG.forums,
-    imageAlt: 'Dota 2 cheat setup guide on Windows PC',
+    imageAlt: 'Fortnite spoofer setup on Windows PC',
     robots: INDEX_ROBOTS,
   },
   status: {
-    title: 'Dota 2 Cheats Status | Loader Active or Updating',
+    title: 'Fortnite Spoofer Status | HWID Utilities',
     description:
-      'Live loader status for Dota 2 cheats on buydota2cheats.com. Active means ready to load; Updating means wait after a Valve patch.',
+      'Fortnite spoofer status and security updates for hardware ID testing utilities. Read clear versus updating status after game patches and system updates before you load.',
     path: '/status',
     ogType: 'website',
     image: PAGE_OG.status,
-    imageAlt: 'Dota 2 Cheats loader status — Active or Updating',
+    imageAlt: 'Fortnite Spoofer loader status',
+    robots: INDEX_ROBOTS,
+  },
+  banChecker: {
+    title: 'HWID Ban Checker | Free EAC Diagnostic',
+    description:
+      'Free HWID ban checker for Easy Anti-Cheat games. Select Fortnite, Rust, Apex Legends, or other EAC titles and compare symptoms with account, IP, and hardware ban patterns.',
+    path: '/ban-checker',
+    ogType: 'website',
+    image: PAGE_OG.banChecker,
+    imageAlt: 'HWID ban checker for Easy Anti-Cheat games',
     robots: INDEX_ROBOTS,
   },
   preview: {
-    title: 'Dota 2 Cheats Preview',
+    title: 'Fortnite Spoofer Preview | HWID Utilities',
     description:
-      'Preview Dota 2 cheats with hero ESP, map hack, and timer overlays before checkout.',
-    path: '/dota-2-cheats',
+      'Preview hardware profile manager, session isolation, and audit log features for Fortnite spoofer utilities. See how hardware testing tools work before you checkout.',
+    path: '/fortnite-spoofer',
     ogType: 'website',
     image: PAGE_OG.product,
-    imageAlt: 'Dota 2 cheats preview with ESP and map vision',
+    imageAlt: 'Fortnite spoofer preview',
     robots: INDEX_ROBOTS,
   },
 } as const satisfies Record<string, PageSeo>
 
 export const HOME_HEADINGS = {
-  h1: 'Dota 2 Cheats',
-  h2Features: 'Dota 2 Cheats Features',
-  h2HowItWorks: 'How Dota 2 Cheats Work',
-  h2Reviews: 'Dota 2 Cheats Reviews',
-  h2Blog: 'Dota 2 Cheats Blog',
+  h1: 'Fortnite Spoofer',
+  h2Features: 'Fortnite Spoofer Features',
+  h2HowItWorks: 'How HWID Utilities Work',
+  h2Reviews: 'Fortnite Spoofer Reviews',
+  h2Blog: 'Fortnite Spoofer Intel',
   h2Forums: 'Community Forums',
-  h2Faq: 'Dota 2 Cheats FAQ',
+  h2Faq: 'Fortnite Spoofer FAQ',
   h2Access: 'Ready when you are',
 } as const
 

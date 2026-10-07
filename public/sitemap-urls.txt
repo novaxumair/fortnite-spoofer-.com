@@ -1,56 +1,67 @@
 # Dota 2 Cheats — plain URL list (buydota2cheats.com)
 # One URL per line for humans and tools. Canonical sitemap for Google: /sitemap
 
-https://buydota2cheats.com/	[Homepage] Dota 2 Cheats home
-https://buydota2cheats.com/blog	[Blog index] Blog index
-https://buydota2cheats.com/blog/ability-cooldown-tracker	[Blog article] Optimizing Teamfights: Advanced Ability Cooldown Trackers for Dota 2
-https://buydota2cheats.com/blog/auto-dodge-skillshots	[Blog article] Staying Untouchable: Using Auto-Dodge Skillshot Features in Matches
-https://buydota2cheats.com/blog/best-dota-2-cheats-review-2026	[Blog article] Best Dota 2 Cheats Review & Comparison 2026: Features, Safety & Value
-https://buydota2cheats.com/blog/cheat-code-dota-2-sandbox	[Blog article] Mastering Cheat Code Dota 2 Settings for Sandbox Practice
-https://buydota2cheats.com/blog/cheat-dota-2-bot-commands	[Blog article] How to Practice Against Bots Using Cheat Dota 2 Bot Commands
-https://buydota2cheats.com/blog/cheat-dota-2-gold	[Blog article] Instantly Adding Gold with Cheat Dota 2 Gold Commands
-https://buydota2cheats.com/blog/cheat-dota-2-lobby	[Blog article] Setting Up Custom Lobbies with Cheat Dota 2 Lobby Options
-https://buydota2cheats.com/blog/cheat-engine-dota-2	[Blog article] Exploring Cheat Engine Dota 2 Tools and Safe Memory Editing
-https://buydota2cheats.com/blog/cheat-lobby-dota-2-training	[Blog article] Best Practices for Using Cheat Lobby Dota 2 Features in Training
-https://buydota2cheats.com/blog/cheat-money-dota-2	[Blog article] Managing Cheat Money Dota 2 Commands for Fast Testing
-https://buydota2cheats.com/blog/complete-dota-2-cheats-list	[Blog article] Complete Dota 2 Cheats List for Items and Gold Generation
-https://buydota2cheats.com/blog/console-commands-cheat-dota-2	[Blog article] How to Use Console Commands and Cheat Dota 2 Effectively
-https://buydota2cheats.com/blog/creep-spawn-timers	[Blog article] Maximizing Farm Efficiency with Accurate Creep Spawn Timers
-https://buydota2cheats.com/blog/dota-2-cheats-item-commands	[Blog article] Spawning Items with Every Available Dota 2 Cheats Item Command
-https://buydota2cheats.com/blog/dota-2-cheats-lobby	[Blog article] Navigating Dota 2 Cheats Lobby Options for Custom Matches
-https://buydota2cheats.com/blog/dota-2-cheats-neutral-items	[Blog article] Finding Neutral Equipment Using Dota 2 Cheats Neutral Items
-https://buydota2cheats.com/blog/enemy-inventory-esp	[Blog article] Outsmarting Your Opponents with Real-Time Enemy Inventory ESP
-https://buydota2cheats.com/blog/full-map-hack-fog-of-war	[Blog article] Ultimate Tactical Awareness: Removing Fog of War with Full Map Hacks
-https://buydota2cheats.com/blog/hero-esp-items-levels	[Blog article] Gaining Map Control: Tracking Enemy Hero ESP, Items, and Levels in Dota 2
-https://buydota2cheats.com/blog/hwid-spoofer-safety	[Blog article] Discover What an HWID Spoofer Does for Safety
-https://buydota2cheats.com/blog/last-hit-prediction-helper	[Blog article] Perfecting Your Farm: How Last Hit Prediction Helpers Improve GPM
-https://buydota2cheats.com/blog/performance-optimized-overlays	[Blog article] High FPS Gaming: Performance Optimized Overlays and Hacks
-https://buydota2cheats.com/blog/roshan-timer	[Blog article] Securing the Aegis: Precise Roshan Timers for Tactical Advantage
-https://buydota2cheats.com/blog/rune-spawn-indicators	[Blog article] Never Miss a Power Spike: Rune Spawn Indicators and Timers Guide
-https://buydota2cheats.com/blog/support-24-7-gaming-software	[Blog article] Reliable Assistance: Why 24/7 Support Matters for Gaming Software Users
-https://buydota2cheats.com/blog/ultimate-guide-dota-2-cheats	[Product] The Ultimate Guide to Dota 2 Cheats: Console Commands and More
-https://buydota2cheats.com/blog/ward-placement-esp	[Blog article] Uncovering Vision: Ward Placement ESP and Observer Map Tracking
-https://buydota2cheats.com/dota-2-cheats	[Product] Dota 2 Cheats product page
-https://buydota2cheats.com/faq	[Trust and support] FAQ
-https://buydota2cheats.com/forums	[Forums index] Forums and setup guides
-https://buydota2cheats.com/forums/buy-dota-2-cheats-safely	[Forum guide] Buying dota 2 cheats safely - checkout, delivery, and scams
-https://buydota2cheats.com/forums/cheat-engine-memory	[Forum guide] cheat engine dota 2 - memory editing risks on VAC
-https://buydota2cheats.com/forums/complete-setup	[Forum guide] Instructions to use Dota 2 Cheats on Windows (loader + first inject)
-https://buydota2cheats.com/forums/console-lobby-commands	[Forum guide] cheat dota 2 lobby / dota 2 cheats lobby - custom game setup
-https://buydota2cheats.com/forums/dota-2-cheats-discussion	[Forum guide] Daily thread: dota 2 cheats, map vision, and VAC rumors
-https://buydota2cheats.com/forums/dota-2-cheats-lifetime	[Forum guide] Lifetime vs monthly ($150 vs $35) - which plan for you?
-https://buydota2cheats.com/forums/features-list	[Forum guide] Dota 2 Cheats feature list (ESP, map hack, timers, support)
-https://buydota2cheats.com/forums/game-patch-status	[Forum guide] Patch day: Dota 2 update vs loader Active / Updating
-https://buydota2cheats.com/forums/hero-esp-config	[Forum guide] Hero ESP with items and level - recommended first toggles
-https://buydota2cheats.com/forums/hwid-spoofer-thread	[Forum guide] HWID spoofer basics - does it replace safe loader habits?
-https://buydota2cheats.com/forums/last-hit-farm-tools	[Forum guide] Last hit prediction helper + creep timers - lane efficiency
-https://buydota2cheats.com/forums/loader-errors	[Forum guide] Loader closes instantly / menu never opens - fix checklist
-https://buydota2cheats.com/forums/map-hack-fog-config	[Forum guide] Full map hack / fog removal - sane defaults for trios
-https://buydota2cheats.com/forums/ranked-mmr-discussion	[Forum guide] Using overlays in ranked - reports, behavior score, smurf risk
-https://buydota2cheats.com/forums/vac-anticheat-safety	[Forum guide] VAC bans after third-party tools - what actually triggers reports?
-https://buydota2cheats.com/privacy	[Legal and policies] Privacy policy
-https://buydota2cheats.com/refunds	[Legal and policies] Refund policy
-https://buydota2cheats.com/reviews	[Trust and support] Customer reviews
-https://buydota2cheats.com/status	[Loader status] Loader status (Active or Updating)
-https://buydota2cheats.com/support	[Trust and support] Support
-https://buydota2cheats.com/terms	[Legal and policies] Terms of use
+https://fortnitespoofer.com/	[Homepage] Dota 2 Cheats home
+https://fortnitespoofer.com/ban-checker	[Legal and policies] /ban-checker
+https://fortnitespoofer.com/blog	[Blog index] Blog index
+https://fortnitespoofer.com/blog/anti-cheat-comparison	[Blog article] Anti-Cheat Comparison - EAC, BE, and Vanguard vs HWID Utilities
+https://fortnitespoofer.com/blog/best-fortnite-cheats	[Product] Best Fortnite Cheats Review 2026 - ESP, Aimbot, Radar
+https://fortnitespoofer.com/blog/best-hwid-spoofer-fortnite	[Blog article] Best HWID Spoofer for Fortnite - Buyers Guide 2026
+https://fortnitespoofer.com/blog/can-hwid-spoofer-damage-pc	[Blog article] Can an HWID Spoofer Damage Your PC? (2026)
+https://fortnitespoofer.com/blog/cheats-for-fortnite-guide	[Blog article] Cheats for Fortnite - Feature Overview & EAC Status
+https://fortnitespoofer.com/blog/do-i-need-to-format-windows	[Blog article] Do You Need to Format Windows After an HWID Ban?
+https://fortnitespoofer.com/blog/fortnite-ai-cheats-explained	[Blog article] Fortnite AI Cheats - Hype vs Real Loader Features
+https://fortnitespoofer.com/blog/fortnite-cheats-esp-aimbot	[Blog article] Fortnite Cheats ESP and Aimbot - Creative Mode Testing
+https://fortnitespoofer.com/blog/fortnite-cheats-free-checkout	[Blog article] Fortnite Cheats Free Trials - Scams and Safe Checkout
+https://fortnitespoofer.com/blog/fortnite-spoofer-setup-guide	[Blog article] Fortnite Spoofer Setup Guide - Backup, Apply, Verify
+https://fortnitespoofer.com/blog/free-fortnite-cheats-myths	[Blog article] Free Fortnite Cheats - Why Reddit Links Fail in 2026
+https://fortnitespoofer.com/blog/free-hwid-spoofer-fortnite	[Blog article] Free Fortnite Spoofer Downloads - What They Actually Cost
+https://fortnitespoofer.com/blog/games-that-hwid-ban	[Blog article] Games That HWID Ban - EAC Titles Beyond Fortnite
+https://fortnitespoofer.com/blog/hardware-vs-spoofer	[Blog article] Hardware Replacement vs Spoofer for Fortnite HWID Bans
+https://fortnitespoofer.com/blog/how-anti-cheat-detects-hardware	[Blog article] How Anti-Cheat Detects Hardware on Fortnite PCs
+https://fortnitespoofer.com/blog/how-hwid-bans-work	[Blog article] How HWID Bans Work on Fortnite and Easy Anti-Cheat
+https://fortnitespoofer.com/blog/how-to-change-hwid	[Blog article] How to Change HWID Safely Before Launching Fortnite
+https://fortnitespoofer.com/blog/hwid-ban-appeal-guide	[Blog article] HWID Ban Appeal Guide - Epic Support Workflow
+https://fortnitespoofer.com/blog/hwid-ban-duration-comparison	[Blog article] HWID Ban Duration - What Fortnite Players Report
+https://fortnitespoofer.com/blog/hwid-ban-myths	[Blog article] 8 HWID Ban Myths That Cost Fortnite Players Money
+https://fortnitespoofer.com/blog/hwid-ban-vs-ip-ban	[Blog article] HWID Ban vs IP Ban - Fortnite & Epic Explained
+https://fortnitespoofer.com/blog/hwid-spoofer-buyers-guide	[Blog article] HWID Spoofer Buyers Guide - Fortnite Spoofer Edition
+https://fortnitespoofer.com/blog/hwid-spoofer-troubleshooting	[Blog article] HWID Spoofer Not Working? 2026 Troubleshooting
+https://fortnitespoofer.com/blog/hwid-spoofer-vs-clean-install	[Blog article] HWID Spoofer vs Clean Windows Install - Fortnite Edition
+https://fortnitespoofer.com/blog/is-hwid-spoofing-safe	[Blog article] Is HWID Spoofing Safe? Ban Risk vs PC Safety
+https://fortnitespoofer.com/blog/permanent-vs-temporary-spoofer	[Blog article] Permanent vs Temporary HWID Spoofer for Fortnite
+https://fortnitespoofer.com/blog/shadow-ban-vs-hwid-ban	[Blog article] Shadow Ban vs HWID Ban on Fortnite
+https://fortnitespoofer.com/blog/tpm-secure-boot-anti-cheat	[Blog article] TPM, Secure Boot, and EAC - What Fortnite Players Should Know
+https://fortnitespoofer.com/blog/vpn-vs-hwid-spoofer	[Blog article] VPN vs HWID Spoofer - What Fortnite Players Confuse
+https://fortnitespoofer.com/blog/what-is-hwid	[Blog article] What Is HWID? Hardware IDs Explained for Fortnite Players
+https://fortnitespoofer.com/blog/what-is-hwid-spoofing	[Blog article] What Is HWID Spoofing? (Fortnite & EAC Context)
+https://fortnitespoofer.com/blog/what-is-kernel-level-anti-cheat	[Blog article] Kernel-Level Anti-Cheat Explained for Fortnite
+https://fortnitespoofer.com/blog/what-to-do-after-hwid-ban	[Blog article] What to Do After a Fortnite HWID Ban
+https://fortnitespoofer.com/blog/what-triggers-hwid-ban	[Blog article] What Triggers an HWID Ban in Fortnite?
+https://fortnitespoofer.com/faq	[Trust and support] FAQ
+https://fortnitespoofer.com/fortnite-cheats	[Product] /fortnite-cheats
+https://fortnitespoofer.com/fortnite-spoofer	[Legal and policies] /fortnite-spoofer
+https://fortnitespoofer.com/forums	[Forums index] Forums and setup guides
+https://fortnitespoofer.com/forums/best-fortnite-cheats-thread	[Forum guide] best fortnite cheats - legit presets vs rage configs
+https://fortnitespoofer.com/forums/best-fortnite-spoofer-picks	[Forum guide] best fortnite spoofer / best spoofer for fortnite - 2026 comparison
+https://fortnitespoofer.com/forums/complete-setup	[Forum guide] Fortnite Spoofer complete setup - backup, apply, verify HWID
+https://fortnitespoofer.com/forums/eac-fortnite-status	[Forum guide] Fortnite EAC status - Active vs Updating after patches
+https://fortnitespoofer.com/forums/features-list	[Forum guide] Fortnite Spoofer feature list - hardware coverage & EAC games
+https://fortnitespoofer.com/forums/fortnite-cheats-discussion	[Forum guide] fortnite cheats - ESP defaults, aim smoothing, and reports
+https://fortnitespoofer.com/forums/fortnite-cheats-features	[Forum guide] Fortnite cheats feature list - visuals, aimbot, item ESP
+https://fortnitespoofer.com/forums/fortnite-spoofer-discussion	[Forum guide] Daily thread: fortnite spoofer, EAC patches, and loader status
+https://fortnitespoofer.com/forums/free-fortnite-cheats-reddit	[Forum guide] free fortnite cheats reddit - navigational megathread
+https://fortnitespoofer.com/forums/free-fortnite-spoofer-myths	[Forum guide] free fortnite spoofer links - malware and incomplete rewrites
+https://fortnitespoofer.com/forums/hwid-spoofer-fortnite	[Forum guide] hwid spoofer fortnite - setup, cleaner, and Fortnite tournaments
+https://fortnitespoofer.com/forums/hwid-spoofer-reddit	[Forum guide] hwid spoofer fortnite reddit - official links only
+https://fortnitespoofer.com/forums/lifetime-vs-monthly	[Forum guide] Lifetime vs monthly ($150 vs $35) for all store products
+https://fortnitespoofer.com/forums/loader-errors	[Forum guide] Loader closes / menu missing - fortnite spoofer fix list
+https://fortnitespoofer.com/forums/ugc-account-recovery-help	[Forum guide] UGC account recovery - Epic appeals and evidence logs
+https://fortnitespoofer.com/privacy	[Legal and policies] Privacy policy
+https://fortnitespoofer.com/refunds	[Legal and policies] Refund policy
+https://fortnitespoofer.com/reviews	[Trust and support] Customer reviews
+https://fortnitespoofer.com/status	[Loader status] Loader status (Active or Updating)
+https://fortnitespoofer.com/store	[Legal and policies] /store
+https://fortnitespoofer.com/support	[Trust and support] Support
+https://fortnitespoofer.com/terms	[Legal and policies] Terms of use
+https://fortnitespoofer.com/ugc-account-recovery	[Legal and policies] /ugc-account-recovery

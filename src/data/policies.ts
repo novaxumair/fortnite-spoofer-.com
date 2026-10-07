@@ -1,3 +1,5 @@
+import { SITE_HOST, SITE_NAME } from './site'
+
 export type PolicySection = {
   heading: string
   body: string[]
@@ -18,12 +20,10 @@ export const POLICY_PAGES: PolicyPageContent[] = [
   {
     slug: 'privacy',
     path: '/privacy',
-    title: 'Privacy Policy | Dota 2 Cheats',
-    description:
-      'How buydota2cheats.com handles order details, delivery email, support messages and basic site analytics for Dota 2 Cheats.',
+    title: `Privacy Policy | ${SITE_NAME}`,
+    description: `How ${SITE_HOST} handles order details, delivery email, support messages and basic site analytics for ${SITE_NAME}.`,
     h1: 'Privacy Policy',
-    intro:
-      'This page explains what we collect when you browse buydota2cheats.com, buy a Dota 2 cheat license, or contact support — and what we do not collect.',
+    intro: `This page explains what we collect when you browse ${SITE_HOST}, buy a ${SITE_NAME} license, or contact support — and what we do not collect.`,
     sections: [
       {
         heading: 'What we collect',
@@ -44,9 +44,8 @@ export const POLICY_PAGES: PolicyPageContent[] = [
       {
         heading: 'Cookies and third parties',
         body: [
-          'Essential cookies may be set by checkout or CDN providers so payment and delivery work.',
-          'Preview media is self-hosted on buydota2cheats.com. Third-party embeds are not used for the main product preview.',
-          'Official Dota 2 on Steam links are external. Valve privacy policies apply once you leave buydota2cheats.com.',
+          `Preview media is self-hosted on ${SITE_HOST}. Third-party embeds are not used for the main product preview.`,
+          `Official Epic Games and Fortnite links are external. Epic privacy policies apply once you leave ${SITE_HOST}.`,
         ],
       },
       {
@@ -66,26 +65,24 @@ export const POLICY_PAGES: PolicyPageContent[] = [
   {
     slug: 'terms',
     path: '/terms',
-    title: 'Terms of Use | Dota 2 Cheats',
-    description:
-      'License rules, age limits, VAC risk, and liability limits for Dota 2 Cheats on buydota2cheats.com.',
+    title: `Terms of Use | ${SITE_NAME}`,
+    description: `License rules, age limits, EAC risk, and liability limits for ${SITE_NAME} on ${SITE_HOST}.`,
     h1: 'Terms of Use',
-    intro:
-      'Buying or running Dota 2 Cheats means you accept these terms. A license covers personal use of hero ESP, map hack, timers, and related modules for Dota 2 on Windows PC — nothing beyond that.',
+    intro: `Buying or running ${SITE_NAME} means you accept these terms. A license covers personal use of HWID utilities, optional Fortnite cheats modules, and related tools on Windows PC — nothing beyond that.`,
     sections: [
       {
         heading: 'Acceptance and what a license covers',
         body: [
-          'A key unlocks the current Dota 2 cheat build for the duration you purchased (monthly or lifetime plans).',
+          'A key unlocks the current loader build for the duration you purchased (monthly or lifetime plans).',
           'Handing the package to someone else, reselling it, sharing accounts, or reverse-engineering the loader breaks these terms and can end your access without a refund.',
         ],
       },
       {
         heading: 'Risk and anti-cheat disclaimer',
         body: [
-          'Dota 2 uses Valve Anti-Cheat (VAC) and Valve moderation. Using third-party software can violate the game terms and lead to account penalties.',
+          'Fortnite uses Easy Anti-Cheat (EAC) and Epic moderation. Using third-party software can violate the game terms and lead to account or hardware penalties.',
           'We push rebuilds after game updates when needed, but nothing here guarantees a build stays compatible forever or that an account stays safe.',
-          'All risk sits with you. We accept no liability for bans, lost MMR, or other damage tied to using the product. Check Active status before you load.',
+          'All risk sits with you. We accept no liability for bans, lost progress, or other damage tied to using the product. Check Active status before you load.',
         ],
       },
       {
@@ -113,12 +110,10 @@ export const POLICY_PAGES: PolicyPageContent[] = [
   {
     slug: 'refunds',
     path: '/refunds',
-    title: 'Refund Policy | Dota 2 Cheats',
-    description:
-      'When Dota 2 Cheats refunds apply for digital licenses, delivery failures, and Updating status windows on buydota2cheats.com.',
+    title: `Refund Policy | ${SITE_NAME}`,
+    description: `When ${SITE_NAME} refunds apply for digital licenses, delivery failures, and Updating status windows on ${SITE_HOST}.`,
     h1: 'Refund Policy',
-    intro:
-      'Dota 2 Cheats licenses are digital goods. This page covers when we can refund, when we cannot, and how to open a request with your order ID.',
+    intro: `${SITE_NAME} licenses are digital goods. This page covers when we can refund, when we cannot, and how to open a request with your order ID.`,
     sections: [
       {
         heading: 'When refunds are available',

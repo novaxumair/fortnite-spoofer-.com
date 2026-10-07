@@ -1,0 +1,11 @@
+@font-face {
+  font-family: 'Burbank Big Condensed';
+  font-style: normal;
+  /* File is Bold; cover all used weights so the browser never falls back to system serif. */
+  font-weight: 100 900;
+  font-display: swap;
+  src:
+    local('BurbankBigCondensed-Bold'),
+    local('Burbank Big Cd Bd'),
+    url('../assets/fonts/burbank-big-condensed-bold.woff2') format('woff2');
+}

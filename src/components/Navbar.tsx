@@ -3,14 +3,16 @@ import { createPortal } from 'react-dom'
 import { Menu, X } from 'lucide-react'
 import { LogoMark } from './LogoMark'
 import { CheckoutLink } from './CheckoutLink'
+import type { ProductId } from '../data/products'
 import { SITE_NAME } from '../data/site'
 import { isActiveRoute, normalizePath } from '../lib/paths'
 
 const NAV_LINKS = [
+  { label: 'Products', to: '/store' },
   { label: 'Blog', to: '/blog' },
   { label: 'Forums', to: '/forums' },
-  { label: 'Product', to: '/dota-2-cheats' },
   { label: 'Status', to: '/status' },
+  { label: 'BAN CHECKER', to: '/ban-checker' },
   { label: 'Reviews', to: '/reviews' },
   { label: 'FAQ', to: '/faq' },
   { label: 'Support', to: '/support' },
@@ -18,24 +20,27 @@ const NAV_LINKS = [
 
 const NAV_LINK_CLASS =
   'inline-flex items-center rounded-full px-3.5 py-1.5 text-sm font-medium transition-colors'
-const NAV_LINK_ACTIVE = 'bg-z-accent/25 text-z-ink shadow-[inset_0_0_0_1px_rgba(167,139,250,0.22)]'
-const NAV_LINK_IDLE = 'text-z-ink/70 hover:bg-z-accent/15 hover:text-z-ink'
+const NAV_LINK_ACTIVE = 'bg-z-accent/25 text-white shadow-[inset_0_0_0_1px_rgba(167,139,250,0.22)]'
+const NAV_LINK_IDLE = 'text-white/70 hover:bg-z-accent/15 hover:text-white'
 
 const MOBILE_LINK_CLASS = 'mobile-nav-link rounded-xl px-4 py-3 text-base font-medium transition-all'
-const MOBILE_LINK_ACTIVE = 'bg-z-accent/20 text-z-ink'
-const MOBILE_LINK_IDLE = 'text-z-ink/80 hover:bg-z-accent/15 hover:text-z-ink'
+const MOBILE_LINK_ACTIVE = 'bg-z-accent/20 text-white'
+const MOBILE_LINK_IDLE = 'text-white/80 hover:bg-z-accent/15 hover:text-white'
 
 type NavbarProps = {
   onVideo?: boolean
   currentPath?: string
+  checkoutProductId?: ProductId
 }
 
 function MobileNavLayers({
   path,
   linkClass,
+  checkoutProductId,
 }: {
   path: string
   linkClass: (to: string, mobile?: boolean) => string
+  checkoutProductId: ProductId
 }) {
   return (
     <>
@@ -76,11 +81,12 @@ function MobileNavLayers({
         </div>
         <div className="mt-auto px-5 pb-[max(2.5rem,env(safe-area-inset-bottom))]">
           <CheckoutLink
-            aria-label="Get Dota 2 Cheats — open checkout"
+            productId={checkoutProductId}
+            aria-label="Get access — open checkout"
             data-mobile-nav-close
             className="cta-gradient block w-full rounded-full px-6 py-3 text-center text-sm font-semibold text-white"
           >
-            Get
+            Get Access
           </CheckoutLink>
         </div>
       </div>
@@ -88,7 +94,11 @@ function MobileNavLayers({
   )
 }
 
-export function Navbar({ onVideo: _onVideo = false, currentPath }: NavbarProps) {
+export function Navbar({
+  onVideo: _onVideo = false,
+  currentPath,
+  checkoutProductId = 'fortnite-spoofer',
+}: NavbarProps) {
   const [clientPath, setClientPath] = useState(() =>
     typeof window !== 'undefined' ? normalizePath(window.location.pathname) : '',
   )
@@ -109,7 +119,13 @@ export function Navbar({ onVideo: _onVideo = false, currentPath }: NavbarProps) 
     return `${NAV_LINK_CLASS} ${active ? NAV_LINK_ACTIVE : NAV_LINK_IDLE}`
   }
 
-  const mobileLayers = <MobileNavLayers path={path} linkClass={linkClass} />
+  const mobileLayers = (
+    <MobileNavLayers
+      path={path}
+      linkClass={linkClass}
+      checkoutProductId={checkoutProductId}
+    />
+  )
 
   return (
     <header className="site-nav relative z-[220]">
@@ -135,10 +151,11 @@ export function Navbar({ onVideo: _onVideo = false, currentPath }: NavbarProps) 
             })}
           </div>
           <CheckoutLink
-            aria-label="Get Dota 2 Cheats — open checkout"
+            productId={checkoutProductId}
+            aria-label="Get access — open checkout"
             className="cta-gradient flex items-center self-stretch rounded-full px-5 text-sm font-semibold text-white transition-opacity hover:opacity-90"
           >
-            Get
+            Get Access
           </CheckoutLink>
         </div>
 
@@ -148,10 +165,10 @@ export function Navbar({ onVideo: _onVideo = false, currentPath }: NavbarProps) 
           aria-label="Open menu"
           aria-expanded="false"
           aria-controls="mobile-nav-drawer"
-          className="relative z-[520] flex h-10 w-10 shrink-0 touch-manipulation items-center justify-center rounded-full border border-z-soft/25 bg-z-elevated/80 text-z-ink backdrop-blur-lg md:hidden"
+          className="relative z-[520] flex h-10 w-10 shrink-0 touch-manipulation items-center justify-center rounded-full border border-z-soft/25 bg-z-elevated/80 text-white backdrop-blur-lg md:hidden"
         >
-          <Menu className="mobile-nav-icon-menu absolute h-5 w-5 text-z-ink" strokeWidth={2} aria-hidden />
-          <X className="mobile-nav-icon-close absolute h-5 w-5 text-z-ink" strokeWidth={2} aria-hidden />
+          <Menu className="mobile-nav-icon-menu absolute h-5 w-5 text-white" strokeWidth={2} aria-hidden />
+          <X className="mobile-nav-icon-close absolute h-5 w-5 text-white" strokeWidth={2} aria-hidden />
         </button>
       </nav>
 

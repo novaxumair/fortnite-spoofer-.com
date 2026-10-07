@@ -6,16 +6,18 @@ type LogoMarkProps = {
 
 export function LogoMark({ className = '', priority = false }: LogoMarkProps) {
   return (
-    <img
-      src="/logo.png"
-      srcSet="/logo.png 1x, /logo.png 2x"
-      width={82}
-      height={82}
-      alt="Dota 2 Cheats logo"
-      className={`h-[82px] w-[82px] shrink-0 object-contain ${className}`}
-      decoding="async"
-      loading={priority ? 'eager' : 'lazy'}
-      fetchPriority={priority ? 'high' : undefined}
-    />
+    <span className={`logo-float inline-flex shrink-0 ${className}`.trim()}>
+      <img
+        src="/logo.png"
+        srcSet="/logo.png 1x, /logo.png 2x"
+        width={82}
+        height={82}
+        alt="Fortnitespoofer.com logo"
+        className="h-[72px] w-[72px] object-contain sm:h-[82px] sm:w-[82px]"
+        decoding="async"
+        loading={priority ? 'eager' : 'lazy'}
+        fetchPriority={priority ? 'high' : undefined}
+      />
+    </span>
   )
 }

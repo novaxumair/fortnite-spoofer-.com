@@ -44,4 +44,4 @@ Allow: /videos/
 Disallow: /404
 Disallow: /404.html
 
-Sitemap: https://buydota2cheats.com/sitemap-index.xml
+Sitemap: https://fortnitespoofer.com/sitemap-index.xml

@@ -5,7 +5,7 @@ import { ListingSearchField } from '../components/ListingSearchField'
 import { SiteFooter } from '../components/SiteFooter'
 import { forumPath } from '../data/blog-paths'
 import { FORUM_INDEX, FORUM_MODERATORS } from '../data/forum-index'
-import { guidePath } from '../data/games'
+import { articlePath } from '../data/blog-paths'
 import { useListingSearchQuery } from '../hooks/useListingSearchQuery'
 import { forumSearchHaystack } from '../lib/listing-search'
 import { SITE_HOST, SITE_NAME } from '../data/site'
@@ -54,12 +54,13 @@ export function ForumsPage({ initialQuery = '' }: ForumsPageProps) {
     <div className="min-h-screen overflow-x-hidden bg-z-bg text-white">
       <ListingPageHero
         currentPath="/forums"
-        eyebrow={<>r/dota2cheats · VAC · Setup · {SITE_HOST}</>}
-        title="Dota 2 Cheats Forums"
+        eyebrow={<>r/fnspoofer · EAC · Setup · {SITE_HOST}</>}
+        title="Fortnite Spoofer Forums"
         description={
           <>
-            Reddit-style threads for dota 2 cheats — moderators, locked archives, and member replies.
-            Long-form guides live on the <a href="/blog">blog</a>.
+            Reddit-style threads for fortnite spoofer, HWID utilities, and Fortnite cheats —
+            moderators, locked archives, and member replies. Long-form guides live on the{' '}
+            <a href="/blog">blog</a>.
           </>
         }
       />
@@ -95,7 +96,7 @@ export function ForumsPage({ initialQuery = '' }: ForumsPageProps) {
                   <ListingSearchField
                     id="forums-search"
                     label="Search forum threads"
-                    placeholder="Search forums — VAC, setup, ESP…"
+                    placeholder="Search forums — EAC, HWID, setup…"
                     defaultValue={initialQuery}
                     inputRef={inputRef}
                     onInput={onSearchInput}
@@ -161,15 +162,42 @@ export function ForumsPage({ initialQuery = '' }: ForumsPageProps) {
                 <p className="text-xs font-bold uppercase tracking-wider text-white/45">About</p>
                 <h2 className="mt-2 text-lg font-semibold text-white">{SITE_NAME}</h2>
                 <p className="mt-2 text-sm leading-relaxed text-white/55">
-                  Community forums for Dota 2 cheats on Windows PC. Threads are moderated; no key
-                  reselling or crack links.
+                  Community forums for Fortnite spoofer and HWID utilities on Windows PC. Threads
+                  are moderated; no key reselling or crack links.
                 </p>
                 <a
-                  href={guidePath('dota-2')}
+                  href="/store"
                   className="cta-gradient mt-4 block rounded-full py-2.5 text-center text-sm font-semibold text-white"
                 >
-                  Store
+                  Products
                 </a>
+                <a
+                  href="/blog"
+                  className="mt-2 block text-center text-sm font-medium text-z-soft hover:text-white"
+                >
+                  Blog guides →
+                </a>
+              </div>
+
+              <div className="page-card mt-4 rounded-2xl p-5">
+                <p className="text-xs font-bold uppercase tracking-wider text-white/45">Quick links</p>
+                <ul className="mt-3 space-y-2 text-sm">
+                  <li>
+                    <a href="/status" className="text-white/70 hover:text-white">
+                      Loader status
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/ban-checker" className="text-white/70 hover:text-white">
+                      Ban checker
+                    </a>
+                  </li>
+                  <li>
+                    <a href={articlePath('how-hwid-bans-work')} className="text-white/70 hover:text-white">
+                      How HWID bans work
+                    </a>
+                  </li>
+                </ul>
               </div>
 
               <div className="page-card mt-4 rounded-2xl p-5">

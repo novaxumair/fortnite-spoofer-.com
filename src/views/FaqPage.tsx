@@ -2,7 +2,9 @@ import { ChevronDown } from 'lucide-react'
 import { Navbar } from '../components/Navbar'
 import { SiteFooter } from '../components/SiteFooter'
 import { SITE_FAQS } from '../data/faqs'
+import { InternalLinksSection } from '../components/InternalLinksSection'
 import { CheckoutLink } from '../components/CheckoutLink'
+import { getFaqSupportLinks } from '../data/internal-links'
 import { SITE_NAME } from '../data/site'
 
 export function FaqPage() {
@@ -19,11 +21,19 @@ export function FaqPage() {
               {SITE_NAME}
             </p>
             <h1 className="mt-3 text-3xl font-semibold tracking-tight text-white sm:text-5xl">
-              Dota 2 Cheats FAQ
+              Fortnite Spoofer FAQ
             </h1>
             <p className="mt-4 text-base leading-relaxed text-white/60">
-              Loader status, hero ESP, map hack, timers, VAC, platforms, buying, loading, support and refunds
-              — straight answers before you checkout.
+              Loader status, HWID spoofer, Fortnite cheats, UGC recovery, delivery, support, and refunds —
+              straight answers before you checkout. See also{' '}
+              <a href="/store" className="text-z-soft hover:text-white">
+                products
+              </a>{' '}
+              and{' '}
+              <a href="/status" className="text-z-soft hover:text-white">
+                status
+              </a>
+              .
             </p>
           </div>
         </section>
@@ -69,6 +79,12 @@ export function FaqPage() {
             </div>
             <div className="flex shrink-0 flex-wrap items-center gap-3">
               <a
+                href="/fortnite-spoofer"
+                className="inline-flex h-11 items-center justify-center rounded-full border border-z-soft/35 bg-white/[0.06] px-5 text-sm font-semibold text-white backdrop-blur-xl transition-colors hover:border-z-soft/50 hover:bg-white/[0.1]"
+              >
+                Spoofer page
+              </a>
+              <a
                 href="/support"
                 className="inline-flex h-11 items-center justify-center rounded-full border border-z-soft/35 bg-white/[0.06] px-5 text-sm font-semibold text-white backdrop-blur-xl transition-colors hover:border-z-soft/50 hover:bg-white/[0.1]"
               >
@@ -80,6 +96,8 @@ export function FaqPage() {
             </div>
           </div>
         </section>
+
+        <InternalLinksSection title="Popular destinations" links={getFaqSupportLinks()} />
       </main>
 
       <SiteFooter currentPath="/faq" />

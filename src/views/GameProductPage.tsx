@@ -2,7 +2,6 @@ import { Check, Shield } from 'lucide-react'
 import { Navbar } from '../components/Navbar'
 import { SiteFooter } from '../components/SiteFooter'
 import { GameCover } from '../components/GameCover'
-import { GameplayPreviewGallery } from '../components/GameplayPreviewGallery'
 import {
   GUIDE_FEATURES,
   PRODUCT_FEATURE_GROUPS,
@@ -22,7 +21,6 @@ import { FaqSection } from '../components/FaqSection'
 import { CheckoutLink } from '../components/CheckoutLink'
 import { NotFoundPage } from './NotFoundPage'
 import { forumPath } from '../data/blog-paths'
-import { D2_HOME_VIDEO } from '../data/media'
 
 function ProductPurchaseCard({ game }: { game: Game }) {
   return (

@@ -1,11 +1,11 @@
 {
-  "name": "buydota2cheats",
+  "name": "fortnitespoofer",
   "private": true,
   "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "astro dev --port 5174",
-    "build": "node scripts/generate-seo-assets.mjs && astro build && node scripts/generate-sitemaps.mjs && node scripts/verify-seo.mjs && node scripts/verify-redirects.mjs && node scripts/verify-single-game.mjs",
+    "build": "node scripts/generate-seo-assets.mjs && astro build && node scripts/generate-sitemaps.mjs && node scripts/verify-seo.mjs && node scripts/verify-redirects.mjs && node scripts/verify-dist-links.mjs && node scripts/verify-fortnite-site.mjs",
     "preview": "astro preview --port 5175",
     "build:worker": "npm run build",
     "deploy:worker": "node scripts/cf-worker-deploy.mjs",
@@ -15,9 +15,9 @@
     "check": "astro check",
     "generate:sitemaps": "node scripts/generate-sitemaps.mjs",
     "generate:seo-assets": "node scripts/generate-seo-assets.mjs",
-    "generate:content": "node scripts/generate-dota2-content.mjs",
+    "generate:content": "node scripts/patch-fortnite-defs.mjs && node scripts/generate-fortnite-content.mjs",
     "prepare:logo": "node scripts/build-logo-assets.mjs",
-    "prepare:media": "node scripts/prepare-dota2-media.mjs",
+    "prepare:media": "node scripts/prepare-fortnite-media.mjs",
     "verify:seo": "node scripts/verify-seo.mjs",
     "verify:live-sitemap": "node scripts/verify-live-sitemap.mjs",
     "ping:google-sitemap": "node scripts/ping-google-sitemap.mjs",
@@ -28,7 +28,6 @@
   "dependencies": {
     "@astrojs/react": "^4.4.2",
     "@astrojs/tailwind": "^6.0.2",
-    "@fontsource/cinzel": "^5.3.0",
     "astro": "^5.18.2",
     "lucide-react": "^1.43.0",
     "react": "^19.2.8",

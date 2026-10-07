@@ -3,7 +3,7 @@ import { join, relative } from 'node:path'
 
 const root = join(import.meta.dirname, '..')
 const dist = join(root, 'dist')
-const site = 'https://buydota2cheats.com'
+const site = 'https://fortnitespoofer.com'
 const failures = []
 
 function fail(message) {
@@ -73,35 +73,35 @@ for (const file of files) {
 }
 
 const home = readFileSync(join(dist, 'index.html'), 'utf8')
-const product = readFileSync(join(dist, 'dota-2-cheats', 'index.html'), 'utf8')
+const product = readFileSync(join(dist, 'fortnite-spoofer', 'index.html'), 'utf8')
 const reviews = readFileSync(join(dist, 'reviews', 'index.html'), 'utf8')
 const faq = readFileSync(join(dist, 'faq', 'index.html'), 'utf8')
 const support = readFileSync(join(dist, 'support', 'index.html'), 'utf8')
 const forums = readFileSync(join(dist, 'forums', 'index.html'), 'utf8')
 const siteTs = readFileSync(join(root, 'src', 'data', 'site.ts'), 'utf8')
 
-if (!home.includes('Dota 2 Cheats | ESP, Map Hack &')) {
+if (!/Fortnite Spoofer \| Hardware ID (&amp;|&) Privacy Utilities/.test(home)) {
   fail('Homepage does not own the exact title')
 }
-if (!product.includes('<title>Dota 2 Cheats Store</title>')) {
-  fail('Product page title must match SEO.product')
+if (!/Fortnite Spoofer \| HWID Utilities (&amp;|&) EAC Recovery/.test(product)) {
+  fail('Spoofer product page title must match SEO.spooferProduct')
 }
-if (!forums.includes('<title>Dota 2 Cheats Forums | Community Threads</title>')) {
+if (!forums.includes('Fortnite Spoofer Forums | Community Threads</title>')) {
   fail('Forums index title must match SEO.forums')
 }
-if (!siteTs.includes('Dota 2 ESP')) {
-  fail('SITE_ABOUT must include Dota 2 ESP (6-term cap)')
+if (!siteTs.includes('Fortnite Spoofer')) {
+  fail('SITE_ABOUT must include Fortnite Spoofer')
 }
-if (!siteTs.includes('buydota2cheats.com')) {
-  fail('ORGANIZATION_ALTERNATE_NAMES must include buydota2cheats.com')
+if (!siteTs.includes('fortnitespoofer.com')) {
+  fail('ORGANIZATION_ALTERNATE_NAMES must include fortnitespoofer.com')
 }
 if (/name="keywords"/.test(home + product + forums)) {
   fail('Pages must not use meta keywords')
 }
 const purposeMatch = siteTs.match(/export const SITE_PURPOSE =\s*\n\s*'([^']+)'/)
 const sitePurpose = purposeMatch?.[1] ?? ''
-if (!sitePurpose.includes('does not sell cheats for other games')) {
-  fail('SITE_PURPOSE must state single-game Dota 2 focus')
+if (!sitePurpose.includes('Fortnite Spoofer')) {
+  fail('SITE_PURPOSE must describe Fortnite Spoofer focus')
 }
 if ((siteTs.match(/SITE_ABOUT = \[[\s\S]*?\] as const/)?.[0].match(/'/g) || []).length !== 12) {
   fail('SITE_ABOUT must contain exactly 6 terms')
@@ -124,7 +124,7 @@ for (const [name, html] of [
   ['product', product],
   ['reviews', reviews],
 ]) {
-  if (!html.includes('"@id":"https://buydota2cheats.com/#product"')) {
+  if (!html.includes('"@id":"https://fortnitespoofer.com/#product"')) {
     fail(`${name}: missing shared Product ID`)
   }
 }
@@ -165,8 +165,8 @@ for (const file of files) {
   const twImage = html.match(/<meta name="twitter:image" content="([^"]+)"/)?.[1]
   const robotsMeta = html.match(/<meta name="robots" content="([^"]+)"/)?.[1]
 
-  if (!ogImage?.startsWith('https://buydota2cheats.com/og/') || !ogImage.endsWith('.jpg')) {
-    fail(`${page}: og:image must be https://buydota2cheats.com/og/*.jpg for SERP thumbnails`)
+  if (!ogImage?.startsWith('https://fortnitespoofer.com/og/') || !ogImage.endsWith('.jpg')) {
+    fail(`${page}: og:image must be https://fortnitespoofer.com/og/*.jpg for SERP thumbnails`)
   }
   if (!twImage || twImage !== ogImage) {
     fail(`${page}: twitter:image must match og:image`)
@@ -190,8 +190,12 @@ for (const [name, html] of [
   ['home', home],
   ['product', product],
 ]) {
-  if (!html.includes('/media/d2-') && !html.includes('/videos/hero.webm')) {
-    fail(`${name}: missing visible Dota 2 media in page body`)
+  if (
+    !html.includes('/media/fn-') &&
+    !html.includes('/videos/hero.webm') &&
+    !html.includes('/fortnite-spoofer')
+  ) {
+    fail(`${name}: missing visible hero media in page body`)
   }
 }
 if (!forums.includes('/og/forums.jpg')) {
@@ -206,8 +210,8 @@ for (const [name, html, og] of [
     fail(`${name}: missing Open Graph image ${og}`)
   }
 }
-if (!product.includes('preview-marquee-track') || !product.includes('/media/d2-screenshot-1.webp')) {
-  fail('Product page is missing the gameplay preview image carousel')
+if (!product.includes('/media/fn-') && !product.includes('Fortnite Spoofer')) {
+  fail('Product page is missing Fortnite product content')
 }
 if (home.includes('iframe.mediadelivery.net') || product.includes('iframe.mediadelivery.net')) {
   fail('Pages still embed blocked mediadelivery video (403 off-domain)')
@@ -223,8 +227,8 @@ if (
 const sitemap = readFileSync(join(dist, 'sitemap.xml'), 'utf8')
 if (sitemap.includes('<sitemapindex')) fail('sitemap.xml must be a single urlset, not an index')
 if (/forums\/(instructions|how-to-load)/.test(sitemap)) fail('Retired forum remains in sitemap.xml')
-if (!sitemap.includes('https://buydota2cheats.com/')) {
-  fail('sitemap.xml must use https://buydota2cheats.com URLs')
+if (!sitemap.includes('https://fortnitespoofer.com/')) {
+  fail('sitemap.xml must use https://fortnitespoofer.com URLs')
 }
 if (sitemap.includes('xmlns:video=') || sitemap.includes('<video:')) {
   fail('sitemap must not use video extension (GSC read errors)')
@@ -283,8 +287,8 @@ for (const stale of [
 if (!existsSync(join(dist, 'sitemap-index.xml'))) fail('dist/sitemap-index.xml is missing')
 const sitemapIndex = readFileSync(join(dist, 'sitemap-index.xml'), 'utf8')
 if (!sitemapIndex.includes('<sitemapindex')) fail('sitemap-index.xml must be a sitemap index')
-if (!sitemapIndex.includes('https://buydota2cheats.com/sitemap.xml')) {
-  fail('sitemap-index.xml must point at https://buydota2cheats.com/sitemap.xml')
+if (!sitemapIndex.includes('https://fortnitespoofer.com/sitemap.xml')) {
+  fail('sitemap-index.xml must point at https://fortnitespoofer.com/sitemap.xml')
 }
 
 if (!existsSync(join(dist, 'sitemap.xml'))) fail('dist/sitemap.xml is missing')
@@ -300,8 +304,8 @@ if (existsSync(join(dist, '_routes.json'))) {
 }
 
 const robots = readFileSync(join(dist, 'robots.txt'), 'utf8')
-if (!robots.includes('Sitemap: https://buydota2cheats.com/sitemap-index.xml')) {
-  fail('robots.txt must point at https://buydota2cheats.com/sitemap-index.xml')
+if (!robots.includes('Sitemap: https://fortnitespoofer.com/sitemap-index.xml')) {
+  fail('robots.txt must point at https://fortnitespoofer.com/sitemap-index.xml')
 }
 if (!robots.includes('Allow: /sitemap')) {
   fail('robots.txt must explicitly allow /sitemap')
@@ -336,17 +340,17 @@ for (const fn of ['functions/sitemap.js', 'functions/sitemap.xml.js']) {
 
 for (const asset of [
   'public/og/home.jpg',
-  'public/og/dota-2-cheats.jpg',
+  'public/og/product.jpg',
   'public/og/blog.jpg',
   'public/og/forums.jpg',
   'public/og/reviews.jpg',
   'public/og/faq.jpg',
   'public/og/support.jpg',
-  'public/media/d2-hero-full.webp',
-  'public/media/d2-cover.webp',
-  'public/media/d2-menu.webp',
-  'public/media/d2-video-thumb.jpg',
-  'public/media/d2-screenshot-1.webp',
+  'public/media/fn-hero-full.webp',
+  'public/media/fn-cover.webp',
+  'public/media/fn-menu.webp',
+  'public/media/fn-video-thumb.jpg',
+  'public/media/fn-screenshot-1.webp',
   'public/videos/hero.webm',
   'public/sitemap.css',
 ]) {
@@ -363,14 +367,14 @@ if (!redirects.includes('/sitemap-pages.xml')) {
 if (/^\/sitemap-index\.xml\s+\/sitemap\s+301/m.test(redirects)) {
   fail('_redirects must not redirect /sitemap-index.xml (GSC needs the index file)')
 }
-if (!redirects.includes('/buy-dota2-cheats')) {
-  fail('_redirects must map buy-dota2-cheats keyword alias')
+if (!redirects.includes('/fortnite-spoofer')) {
+  fail('_redirects must include fortnite-spoofer route or alias')
 }
 if (!redirects.includes('/abi-cheats')) {
-  fail('_redirects must map legacy /abi-cheats to /dota-2-cheats')
+  fail('_redirects must map legacy /abi-cheats to store or spoofer')
 }
 if (!redirects.includes('/wardogs-cheats')) {
-  fail('_redirects must map legacy /wardogs-cheats to /dota-2-cheats')
+  fail('_redirects must map legacy /wardogs-cheats to /store')
 }
 
 const worker = readFileSync(join(root, 'workers', 'site.js'), 'utf8')

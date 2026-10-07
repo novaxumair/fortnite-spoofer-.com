@@ -2,7 +2,9 @@ import { Star } from 'lucide-react'
 import { Navbar } from '../components/Navbar'
 import { SiteFooter } from '../components/SiteFooter'
 import { getReviewsAggregate, REVIEWS } from '../data/reviews'
+import { InternalLinksSection } from '../components/InternalLinksSection'
 import { CheckoutLink } from '../components/CheckoutLink'
+import { getFaqSupportLinks } from '../data/internal-links'
 import { SITE_NAME } from '../data/site'
 
 function Stars({ rating }: { rating: number }) {
@@ -35,11 +37,11 @@ export function ReviewsPage() {
               {SITE_NAME}
             </p>
             <h1 className="mt-3 text-3xl font-semibold tracking-tight text-white sm:text-5xl">
-              Dota 2 Cheats Reviews
+              Fortnite Spoofer Reviews
             </h1>
             <p className="mt-4 text-base leading-relaxed text-white/60">
-              Feedback from players who use Dota 2 cheats — ESP clarity, map vision, timers,
-              and whether builds held after the last game patch.
+              Feedback from buyers who use Fortnite spoofer utilities — profile backups, session
+              isolation, loader status, and whether builds held after the last Fortnite patch.
             </p>
             <p className="mt-4 text-sm text-white/45" aria-label="Aggregate rating">
               Average {aggregate.ratingValue} / 5 · {aggregate.reviewCount} reviews
@@ -83,10 +85,16 @@ export function ReviewsPage() {
             </div>
             <div className="flex shrink-0 flex-wrap items-center gap-3">
               <a
-                href="/dota-2-cheats"
+                href="/store"
                 className="inline-flex h-11 items-center justify-center rounded-full border border-z-soft/35 bg-white/[0.06] px-5 text-sm font-semibold text-white backdrop-blur-xl transition-colors hover:border-z-soft/50 hover:bg-white/[0.1]"
               >
-                Product details
+                Products
+              </a>
+              <a
+                href="/fortnite-spoofer"
+                className="inline-flex h-11 items-center justify-center rounded-full border border-z-soft/35 bg-white/[0.06] px-5 text-sm font-semibold text-white backdrop-blur-xl transition-colors hover:border-z-soft/50 hover:bg-white/[0.1]"
+              >
+                Spoofer
               </a>
               <CheckoutLink className="cta-gradient inline-flex h-11 items-center justify-center rounded-full px-6 text-sm font-semibold text-white">
                 Checkout
@@ -94,6 +102,8 @@ export function ReviewsPage() {
             </div>
           </div>
         </section>
+
+        <InternalLinksSection title="Where to go next" links={getFaqSupportLinks()} />
       </main>
 
       <SiteFooter currentPath="/reviews" />

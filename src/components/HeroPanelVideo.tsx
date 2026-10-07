@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react'
-import { D2_HOME_VIDEO } from '../data/media'
+import { FN_HOME_VIDEO } from '../data/media'
 
 type HeroPanelVideoProps = {
   variant?: 'home' | 'forums'

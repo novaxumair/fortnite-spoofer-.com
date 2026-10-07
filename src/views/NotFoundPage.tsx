@@ -23,7 +23,7 @@ export function NotFoundPage() {
               Page not found
             </h2>
             <p className="mx-auto mt-4 max-w-md text-sm leading-relaxed text-white/55 sm:text-base">
-              That route does not exist. Search Dota 2 forum threads or head back home.
+              That route does not exist. Search Fortnite spoofer forum threads or head back home.
             </p>
 
             <div className="relative z-50 mx-auto mt-8 flex max-w-xl justify-center text-left">

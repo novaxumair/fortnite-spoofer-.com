@@ -28,14 +28,14 @@ const SEO_BY_SLUG: Partial<Record<string, PageSeo>> = {
 
 const seoOverride = SEO_BY_SLUG[post.slug]
 const seo: PageSeo = seoOverride
-  ? { ...seoOverride, image: ogImage, imageAlt: `${post.title} — Dota 2 cheats forum thread` }
+  ? { ...seoOverride, image: ogImage, imageAlt: `${post.title} — Fortnite Spoofer forum thread` }
   : {
       title: post.metaTitle,
       description: post.metaDescription,
       path: forumPath(post.slug),
       ogType: 'article',
       image: ogImage,
-      imageAlt: `${post.title} — Dota 2 cheats forum thread`,
+      imageAlt: `${post.title} — Fortnite Spoofer forum thread`,
       robots: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
     }
 
