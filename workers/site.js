@@ -128,6 +128,13 @@ export default {
       return Response.redirect(apex.toString(), 301)
     }
 
+    // One URL per page: /path/ → /path (matches HTML canonical + sitemap <loc>)
+    if (url.pathname.length > 1 && url.pathname.endsWith('/')) {
+      const bare = new URL(url.toString())
+      bare.pathname = url.pathname.replace(/\/+$/, '')
+      return Response.redirect(bare.toString(), 301)
+    }
+
     const assetResponse = await fetchStatic(env, request, url)
     let response = withHtmlCharset(assetResponse)
 

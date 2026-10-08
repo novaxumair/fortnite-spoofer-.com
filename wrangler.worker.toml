@@ -21,5 +21,6 @@ zone_name = "fortnitespoofer.com"
 [assets]
 directory = "./dist"
 binding = "ASSETS"
-html_handling = "auto-trailing-slash"
+# Match Astro trailingSlash: 'never' — never 308 /page → /page/
+html_handling = "drop-trailing-slash"
 not_found_handling = "404-page"

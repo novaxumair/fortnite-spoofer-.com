@@ -120,6 +120,10 @@ if (!existsSync(dist)) {
       const { pathname } = splitHash(path)
       if (!pathname.startsWith('/')) continue
       if (pathname.startsWith('/checkout')) continue
+      if (pathname.length > 1 && pathname.endsWith('/')) {
+        fail(`Trailing slash in local URL ${pathname} (in ${relative(root, file)})`)
+        continue
+      }
       const norm = stripTrailingSlash(pathname)
       const key = `${norm}@${relative(dist, file)}`
       if (checked.has(key)) continue

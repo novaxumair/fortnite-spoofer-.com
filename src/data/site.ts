@@ -229,7 +229,12 @@ export const HOME_HEADINGS = {
   h2Access: 'Ready when you are',
 } as const
 
+/** Apex URL without trailing slash (except homepage). Matches Astro trailingSlash: 'never'. */
 export function absoluteUrl(path: string) {
-  if (!path || path === '/') return `${SITE_URL}/`
-  return `${SITE_URL}${path.startsWith('/') ? path : `/${path}`}`
+  let p = (path ?? '').trim()
+  if (!p || p === '/') return `${SITE_URL}/`
+  if (!p.startsWith('/')) p = `/${p}`
+  p = p.replace(/\/+$/, '') || '/'
+  if (p === '/') return `${SITE_URL}/`
+  return `${SITE_URL}${p}`
 }

@@ -61,6 +61,12 @@ for (const file of files) {
     if (!hasHreflangDefault) {
       fail(`${page}: missing self-referencing hreflang=x-default`)
     }
+    const trailingCanon =
+      /rel="canonical" href="https:\/\/fortnitespoofer\.com\/[^"]+\/"/.test(html) ||
+      /hreflang="(?:en|x-default)" href="https:\/\/fortnitespoofer\.com\/[^"]+\/"/.test(html)
+    if (trailingCanon) {
+      fail(`${page}: canonical/hreflang must not use trailing slashes (hreflang non-200 risk)`)
+    }
   }
 
   if (html.includes('assets-prd.ignimgs.com')) fail(`${page}: contains third-party IGN image`)
@@ -383,6 +389,16 @@ if (!worker.includes("startsWith('www.')") && !worker.includes('startsWith("www.
 }
 if (!worker.includes('301')) {
   fail('workers/site.js must 301 www ? apex for a single canonical host')
+}
+if (!worker.includes("pathname.endsWith('/')")) {
+  fail('workers/site.js must 301 trailing-slash URLs to apex paths (canonical match)')
+}
+const wranglerWorker = readFileSync(join(root, 'wrangler.worker.toml'), 'utf8')
+if (!wranglerWorker.includes('drop-trailing-slash')) {
+  fail('wrangler.worker.toml html_handling must be drop-trailing-slash (Astro trailingSlash: never)')
+}
+if (wranglerWorker.includes('auto-trailing-slash')) {
+  fail('wrangler.worker.toml must not use auto-trailing-slash (conflicts with canonical URLs)')
 }
 if (!worker.includes('/google-sitemap.xml')) {
   fail('workers/site.js must serve /google-sitemap.xml for GSC alternate URL')
