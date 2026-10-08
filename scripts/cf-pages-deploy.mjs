@@ -11,7 +11,7 @@ const dist = join(root, 'dist')
 const project =
   process.env.CF_PAGES_PROJECT_NAME ||
   process.env.WRANGLER_PAGES_PROJECT ||
-  'buydota2cheats'
+  'fortnite-spoofer-com'
 
 if (!existsSync(dist)) {
   console.error('cf-pages-deploy: dist/ missing — run npm run build first')

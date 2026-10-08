@@ -54,3 +54,5 @@ export const SUPPORT_FAQS = [
     a: 'Delivery is digital after checkout. Use only the loader link from your order email. Third-party mirrors are unsupported.',
   },
 ] as const
+
+

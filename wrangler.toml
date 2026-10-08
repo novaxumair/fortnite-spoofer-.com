@@ -1,5 +1,5 @@
 # Optional Cloudflare Pages project (Workers & Pages → Pages). Primary deploy is Worker:
 # see wrangler.worker.toml and docs/CLOUDFLARE-WORKER.md (npm run build + npm run deploy:worker).
-name = "buydota2cheats"
+name = "fortnite-spoofer-com"
 compatibility_date = "2024-09-23"
 pages_build_output_dir = "./dist"
